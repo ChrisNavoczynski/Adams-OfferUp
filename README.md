@@ -4,7 +4,16 @@
 Readme file for Team Adams OfferUp clone, AD320 group project.
 
 Team Members:
-Abdirasaq Ali
-Christopher Navoczynski
-Courtney Hoppus
-Dylan Wilkinson
+	Abdirasaq Ali
+	Christopher Navoczynski
+	Courtney Hoppus
+	Dylan Wilkinson
+
+Application Description:
+	Web app for resale use.
+	Supports:
+		sellers
+		buyers
+		admins
+	Functionality:
+		
