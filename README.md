@@ -1,9 +1,8 @@
 # AD320-TeamAdams
 
 ## Team Members:
-* Abdirasaq Ali
-* Christopher Navoczynski
 * Courtney Hoppus
+* Chris Navoczynski
 * Dylan Wilkinson
 * Jesse Brent Coats
 
