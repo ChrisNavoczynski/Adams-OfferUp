@@ -1,4 +1,4 @@
-# AD320-TeamAdams
+# AD320-TeamAdams - Week 2
 
 ## Team Members:
 * Courtney Hoppus
@@ -6,12 +6,7 @@
 * Dylan Wilkinson
 * Jesse Brent Coats
 
-## Install:
-
-## Application Description: Web app for resale use.
-### Supports:
-* Sellers
-* Buyers
-* Admins
-* Functionality
+##Wireframes
+* Team members each create wireframes (utilizing Miro) 
+representing our app's UI.
 		
