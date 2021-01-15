@@ -6,7 +6,7 @@
 * Dylan Wilkinson
 * Jesse Brent Coats
 
-##Wireframes
+## Wireframes
 * Team members each create wireframes (utilizing Miro) 
 representing our app's UI.
 		
