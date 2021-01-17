@@ -4,6 +4,7 @@
 * Courtney Hoppus
 * Chris Navoczynski
 * Dylan Wilkinson
+* Alas I Ali
 * Jesse Brent Coats
 
 ## Install:
