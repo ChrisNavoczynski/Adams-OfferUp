@@ -1,10 +1,10 @@
 # AD320-TeamAdams
 
 ## Team Members:
+* Alas I Ali
 * Courtney Hoppus
 * Chris Navoczynski
 * Dylan Wilkinson
-* Alas I Ali
 * Jesse Brent Coats
 
 ## Install:
