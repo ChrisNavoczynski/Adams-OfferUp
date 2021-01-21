@@ -7,6 +7,6 @@
 * Dylan Wilkinson
 * Jesse Brent Coats
 
-##UI Prototpes:
+## UI Prototpes:
 * Create a react app using Node Create-React-App script
 		
