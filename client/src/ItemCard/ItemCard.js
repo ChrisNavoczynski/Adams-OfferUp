@@ -1,5 +1,5 @@
 //AD320- TeamAdams
-//Courtney Hoppus - UI Prototypes
+//UI Prototypes
 
 import React from 'react';
 import './ItemCard.css';
@@ -9,7 +9,7 @@ const itemCard = (props) => {
     return (
         <div className="ItemCard">
             {/* this should be things we can bind to */}
-            <img src={Photo} alt='item image' />
+            <img src={Photo} alt='item' />
             <h3>Item Name</h3>
             <h3>Item Location</h3>
             <h3>Item Price</h3>

@@ -5,19 +5,21 @@ import React, { Component } from 'react';
 import './App.css';
 import ItemRow from './ItemRow/ItemRow';
 import Logo from './Logo/Logo';
-import SearchBar from './SearchBar/SearchBar';
-
+import ItemPage from './ItemPage/ItemPage';
+ 
 class App extends Component {
   render() {
     return (
       <div className="App">
           <Logo/>
           <hr/>
-          <SearchBar/ >
           <hr/>
           <ItemRow/>
           <ItemRow/>
-          <ItemRow/>
+          <ItemRow/>  
+          <hr/>
+          <hr/>
+          <ItemPage/>
       </div>
     );
   }
