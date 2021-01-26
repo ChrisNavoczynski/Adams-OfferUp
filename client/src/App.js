@@ -1,17 +1,26 @@
-//Created by Chis Navoczynski
-//AD320- TeamAdams 
+//AD320- TeamAdams
+//Courtney Hoppus - UI Prototypes
 
-import ItemPageHeader from './itemPage_components/item_header'
-import ItemPageSelection from './itemPage_components/selectItem'
+import React, { Component } from 'react';
+import './App.css';
+import ItemRow from './ItemRow/ItemRow';
+import Logo from './Logo/Logo';
+import SearchBar from './SearchBar/SearchBar';
 
-function App() {
-  return (
-    <div>
-        <ItemPageHeader/>
-        <ItemPageSelection/>
-
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+          <Logo/>
+          <hr/>
+          <SearchBar/ >
+          <hr/>
+          <ItemRow/>
+          <ItemRow/>
+          <ItemRow/>
+      </div>
+    );
+  }
 }
 
 export default App;
