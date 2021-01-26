@@ -1,5 +1,5 @@
 //AD320- TeamAdams
-//Courtney Hoppus - UI Prototypes
+//UI Prototypes
 
 import React, { Component } from 'react';
 import './App.css';
