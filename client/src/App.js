@@ -6,6 +6,7 @@ import './App.css';
 import ItemRow from './ItemRow/ItemRow';
 import Logo from './Logo/Logo';
 import ItemPage from './ItemPage/ItemPage';
+import LoginModal from './LoginModal/logIn'
  
 class App extends Component {
   render() {
@@ -20,6 +21,10 @@ class App extends Component {
           <hr/>
           <hr/>
           <ItemPage/>
+          <hr/>
+          <hr/>
+          <LoginModal/>
+
       </div>
     );
   }
