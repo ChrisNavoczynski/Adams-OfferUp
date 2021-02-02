@@ -1,4 +1,6 @@
+
 # AD320-TeamAdams
+
 
 ## Team Members:
 * Alas I Ali
@@ -7,7 +9,13 @@
 * Dylan Wilkinson
 * Jesse Brent Coats
 
+
+## API Prototypes
+* Implement routes needed for version of OfferUP
+* Routes consist of at least three resourses
+
 ## Install:
+
 
 ## Application Description: Web app for resale use.
 ### Supports:
