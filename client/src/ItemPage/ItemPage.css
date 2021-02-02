@@ -1,0 +1,21 @@
+.itemPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+}
+
+.photo {
+    width: 30%;
+    float: left;
+}
+
+.list {
+    width: 60%;
+    float: right;
+}

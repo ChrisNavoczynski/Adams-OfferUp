@@ -1,0 +1,9 @@
+.App {
+  text-align: center; /*this is just for the placeholder view*/
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
