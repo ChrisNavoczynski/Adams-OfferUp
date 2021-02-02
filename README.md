@@ -1,16 +1,17 @@
-# AD320-TeamAdams - Week 3
+# AD320-TeamAdams
 
 ## Team Members:
-* Alas Ali
+* Alas I Ali
 * Courtney Hoppus
 * Chris Navoczynski
 * Dylan Wilkinson
 * Jesse Brent Coats
 
-## UI Prototypes
-* Use wireframes from prev. assignment to build the
-skeleton of a UI for different user interactions of the app.
-* They currently do not need app functionality 
+## Install:
 
-
-		
+## Application Description: Web app for resale use.
+### Supports:
+* Sellers
+* Buyers
+* Admins
+* Functionality
