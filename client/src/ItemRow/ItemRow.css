@@ -1,0 +1,11 @@
+/*Courtney Hoppus - UI Prototypes*/
+
+.ItemRow {
+    width: 90%;
+    margin: 8px;
+    border: 1px solid darkorchid;
+    box-shadow: 2px 4px lightgreen;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+}

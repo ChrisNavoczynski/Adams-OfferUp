@@ -1,0 +1,15 @@
+/*Courtney Hoppus - UI Prototypes*/
+
+.ItemCard {
+    width: 20%;
+    margin: 4px;
+    border: 1px solid darkmagenta;
+    box-shadow: 2px 2px lightpink;
+    padding: 8px;
+    text-align: center;
+}
+
+img {
+    width: 90%;
+    align-self: center;
+}
