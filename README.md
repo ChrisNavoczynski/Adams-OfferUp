@@ -1,5 +1,5 @@
 
-# AD320-TeamAdams
+# AD320-TeamAdams -Week 4
 
 
 ## Team Members:
@@ -16,10 +16,9 @@
 
 ## Install:
 
-
 ## Application Description: Web app for resale use.
 ### Supports:
-* Sellers
-* Buyers
+* Users
+* Products
 * Admins
 * Functionality
