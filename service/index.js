@@ -10,6 +10,8 @@ app.use(express.json());
 
 //app.use('/v1/users', usersRouter);
 app.use('/v1/products', productsRouter);
+
+//Update products
 app.post('/v2/products', (req, res) => {
     res.send("Future Updates Go Here!")
 })
