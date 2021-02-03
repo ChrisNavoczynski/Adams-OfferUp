@@ -6,7 +6,6 @@ const products = [
     {id: "7", name: "Selected Item id=7", price: 80, photo: "link", available: true,
     photo: "Photo of Selected Item", description: "item details",
     map: "GoogleMap Link", save: true, contactSeller: "link"},
-    
     { header: "Similar Items"},
     { id: "1", name: "Similar Item 1", price: 60, photo: "link", available: true},
     { id: "2", name: "Similar Item 2", price: 54, photo: "link", available: false},
@@ -21,7 +20,21 @@ productsRouter.route('/')
     .post((req, res) => {
         console.log(req.body);
         res.sendStatus(204); //successful with no return
+    })
+    .put((req, res) => {
+        res.sendStatus(404);
+    })
+    .delete((req, res) => {
+        res.sendStatus(505);
     });
+
+productsRouter.put('/products/:productsId', (req, res) => {
+        const getProducts = getProduct(req.params.userId)
+        if (!getProducts) 
+            return res.status(404).json({})
+        matchingProducts.name = req.body.name
+        res.json()
+       })
 
 productsRouter.route("/:id")
     .get((req, res) => {
