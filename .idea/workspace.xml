@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ef9bc136-5fcf-4c43-b134-f51159c2c6c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemCard/ItemCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ItemCard/ItemCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemCard/ItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ItemCard/ItemCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemHeader/ItemHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ItemHeader/ItemHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemHeader/ItemHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ItemHeader/ItemHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemPage/ItemPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ItemPage/ItemPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemPage/ItemPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ItemPage/ItemPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemRow/ItemRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ItemRow/ItemRow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ItemRow/ItemRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ItemRow/ItemRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/LoginModal/logIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LoginModal/logIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/LoginModal/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LoginModal/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Logo/Logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Logo/Logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Logo/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Logo/Logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/SearchBar/SearchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SearchBar/SearchBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SearchBar/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpPage/components/searchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/HelpPage/components/searchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpPage/helpPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/HelpPage/helpPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpPage/helpPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/HelpPage/helpPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/itemPage_components/google.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/itemPage_components/google.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/itemPage_components/itemTemplate.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/itemPage_components/itemTemplate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/itemPage_components/itemTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/itemPage_components/itemTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/itemPage_components/item_header.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/itemPage_components/item_header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/itemPage_components/item_header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/itemPage_components/item_header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/itemPage_components/photo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/itemPage_components/photo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/itemPage_components/selectItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/itemPage_components/selectItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/itemPage_components/selectItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/itemPage_components/selectItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/logo.svg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nBN1EZgYRTVpo0s6NQYI8qrmEw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/assets" />
+      <recent name="$PROJECT_DIR$/client/src/components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/client/src/App.js" working-dir="$PROJECT_DIR$/client/src">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.App.js" />
+        <item itemvalue="Node.js.App.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef9bc136-5fcf-4c43-b134-f51159c2c6c4" name="Default Changelist" comment="" />
+      <created>1610859306935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610859306935</updated>
+      <workItem from="1610859308682" duration="919000" />
+      <workItem from="1611605230354" duration="942000" />
+      <workItem from="1611610820546" duration="603000" />
+      <workItem from="1611697175714" duration="641000" />
+      <workItem from="1611698115064" duration="5987000" />
+      <workItem from="1611717507799" duration="8000" />
+      <workItem from="1611719045073" duration="15000" />
+      <workItem from="1611858919188" duration="750000" />
+      <workItem from="1612290446012" duration="2435000" />
+      <workItem from="1612293388873" duration="4826000" />
+      <workItem from="1612462874454" duration="29000" />
+      <workItem from="1612641175903" duration="4094000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="login" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
