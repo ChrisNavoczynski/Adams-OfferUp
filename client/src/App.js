@@ -1,6 +1,4 @@
 //AD320- TeamAdams
-//UI Prototypes
-
 import React, { Component } from 'react';
 import './App.css';
 import ItemRow from './components/ItemRow/ItemRow';
@@ -32,5 +30,3 @@ class App extends Component {
 
 export default App;
 
-/* //Created by Chis Navoczynski
-//AD320- TeamAdams*/
