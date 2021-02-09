@@ -7,13 +7,13 @@
     width: 100%;
     padding: inherit;
     background: rgb(228, 209, 44);    
-}
+} 
 
 .NavBar {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 
 span {
     display: inline-block;

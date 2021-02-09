@@ -1,8 +1,17 @@
 /*Courtney Hoppus - UI Prototypes*/
 
 .Logo {
-    border: 4px solid black;
-    margin: 2px;
-    width: 50%;
-    align-self: center;
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 40px;
+    margin: 10px;
+
+}
+
+.Link {
+    text-decoration: none;
+    color: #FFFFFF;
 }

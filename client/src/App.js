@@ -1,12 +1,12 @@
 //AD320- TeamAdams
-//UI Prototypes
-
 import React, { Component } from 'react';
 import './App.css';
 import ItemRow from './components/ItemRow/ItemRow';
 import Logo from './components/Logo/Logo';
 import ItemPage from './components/ItemPage/ItemPage';
-import LoginModal from './components/LoginModal/logIn'
+import LoginModal from './components/LoginModal/logIn';
+
+
  
 class App extends Component {
   render() {
@@ -32,5 +32,3 @@ class App extends Component {
 
 export default App;
 
-/* //Created by Chis Navoczynski
-//AD320- TeamAdams*/
