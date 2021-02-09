@@ -2,10 +2,12 @@ import React from "react";
 import { 
     AppBar, 
     Button, 
-    InputBase, 
-    Toolbar, 
-    Typography } from "@material-ui/core";
+    InputBase,
+    Typography,
+    Toolbar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
+//import Logo from "../Logo/Logo";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,10 +15,14 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1
     },
     toolbar: {
-        backgroundColor: 'yellow',
+        backgroundColor: '#80cbc4',
+        textDecoration: 'none'
+    },
+    link: {
+        textDecoration: 'none',
+        color: 'black',
     },
     title: {
-        backgroundColor: 'lightblue',
         margin: theme.spacing(2),
         width: '30%',
         fontWeight: 'bold',
@@ -29,11 +35,12 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         margin: theme.spacing(2),
         width: '30%',
-        backgroundColor: 'lightpink',
+        backgroundColor: '#b2dfdb',
     },
     sideButton: {
-        width: '10%',
-        backgroundColor: 'white',
+        width: '100px',
+        backgroundColor: '#80cbc4',
+        fontWeight: 'bold',
         margin: theme.spacing(2),
     },
 
@@ -45,16 +52,31 @@ export default function Header() {
         <div className={classes.root}>
             <AppBar position="static" >
                 <Toolbar className={classes.toolbar}>
+                    {/** <Logo></Logo> */}
                     {/** placeholder for Logo */}
                     <Typography className={classes.title} variant="h3">
+                        <a className={classes.link} href="/home">
                         OfferUpClone
+                        </a>
                     </Typography>
                     <div className={classes.search}>
                         <InputBase placeholder="Search..." />
                     </div>
-                    <Button className={classes.sideButton}>How it Works</Button>
-                    <Button className={classes.sideButton}>Log In</Button>
-                    <Button className={classes.sideButton}>Sign Up</Button>
+                    <a className={classes.link} href="/helppage">
+                        <Button className={classes.sideButton}>
+                            How it Works
+                        </Button>
+                    </a>
+                    <a className={classes.link} href="/login">
+                        <Button className={classes.sideButton}>
+                            Log In
+                        </Button>
+                    </a>
+                    <a className={classes.link} href="/signup">
+                        <Button className={classes.sideButton}>
+                            Sign Up
+                        </Button>
+                    </a>
                 </Toolbar>
             </AppBar>
         </div>
