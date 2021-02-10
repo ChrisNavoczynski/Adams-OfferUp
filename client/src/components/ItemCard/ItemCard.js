@@ -4,17 +4,40 @@
 import React from 'react';
 import './ItemCard.css';
 import Photo from '../itemPage_components/photo.jpg';
+import { Card,
+        CardContent,
+        makeStyles,
+        Typography } from '@material-ui/core';
 
-const itemCard = (props) => {
+const useStyles = makeStyles((theme) => ({
+    card: {
+        margin: theme.spacing(2),
+        backgroundColor: "#b2dfdb",
+    },
+    image: {
+        width: "80%",
+    },
+    details: {
+        textDecoration: "none",
+        color: "black"
+    }
+}));
+
+const ItemCard = (props) => {
+    const classes = useStyles();
+    const details = props.item.id;
     return (
-        <div className="ItemCard">
-            {/* this should be things we can bind to */}
-            <img src={Photo} alt='item' />
-            <h3>Item Name</h3>
-            <h3>Item Location</h3>
-            <h3>Item Price</h3>
-        </div>
+        <Card className={classes.card} variant="outlined">
+            <a href={"/products/" + details} className={classes.details}>
+            <CardContent >
+                <img src={Photo} alt="item" className={classes.image}/>
+                <Typography>{props.item.name}</Typography>
+                <Typography>{props.item.location}</Typography>
+                <Typography>Price: {props.item.price}</Typography>
+            </CardContent>
+            </a>
+        </Card>
     )
 };
 
-export default itemCard;
+export default ItemCard;
