@@ -6,7 +6,7 @@ import './ItemPage.css';
 import ItemRow from '../ItemRow/ItemRow';
 import PHOTO from '../itemPage_components/photo.jpg';
 import Container from '../googleMap/googleMap';
-//import { Button, TextField } from '@material-ui/core';
+import '../ContactSeller/ContactSeller.js';
 
 const itemPage = (props) => {
     return (
@@ -20,10 +20,18 @@ const itemPage = (props) => {
                 <div className= "list">
                     <ul>Item Description</ul>
                     <ul>Asking Price</ul>
-                    <ul>Make An Offer</ul>
-                    <ul>Save to Favorites</ul>
+                 <ul>Save to Favorites</ul>
                 </div>
-            </div>
+
+                <div className="Contact">
+                <a href='../ContactSeller/ContactSeller.js' target="_blank">
+                    <button  className="ContactPage">
+                    <p>Contact Seller</p>
+                    </button>
+                </a>
+                </div>
+        </div>
+
             <div className="map">
                 <h3>Location</h3>
                 <div className="overMap">
