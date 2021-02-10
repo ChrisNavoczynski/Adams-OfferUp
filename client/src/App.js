@@ -6,9 +6,9 @@ import Logo from './components/Logo/Logo';
 import Header from './components/Header/Header';
 import ItemPage from './components/ItemPage/ItemPage';
 import LoginModal from './components/LoginModal/logIn';
+import ContactForm from './components/ContactSeller/ContactSeller';
 
 
- 
 class App extends Component {
   render() {
     return (
@@ -26,6 +26,8 @@ class App extends Component {
           <hr/>
           <hr/>
           <LoginModal/>
+          <hr/>
+          <ContactForm/>
 
       </div>
     );
