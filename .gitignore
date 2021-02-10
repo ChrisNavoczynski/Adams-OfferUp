@@ -1,5 +1,6 @@
+node_modules
 .env
 *.code-workspace
 dist
 .eslintcache
-node_modules
+

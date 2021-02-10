@@ -2,6 +2,8 @@
 
 import React from 'react'
 import './item_header.css'
+import './loginModal/login.js'
+import './Logo/Logo.js'
 
 export default function itemHeaderGroup(props) {
     return (
@@ -10,11 +12,10 @@ export default function itemHeaderGroup(props) {
             <h1>Logo and Company Name</h1>
             </div>
             <div className="NavBar">
-            <span>Home(icon)    </span>
             <span>Search        </span>
             <span>Filter Location</span>
             <span>Cart(icon)     </span>
-            <span>Login          </span>
+            <Modal />
             <span>Signup         </span>
             </div>    
         </div>

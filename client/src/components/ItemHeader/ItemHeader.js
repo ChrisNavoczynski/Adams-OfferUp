@@ -3,7 +3,8 @@
 
 import React from 'react';
 import '../itemPage_components/item_header.css';
-import Logo from '../Logo/Logo';
+import Logo from '../Logo/Logo.js';
+import Modal from 'react-bootstrap/Modal';
 
 const itemHeader = (props) => {
     return (
@@ -15,7 +16,7 @@ const itemHeader = (props) => {
             <span>Search        </span>
             <span>Filter Location</span>
             <span>Cart(icon)     </span>
-            <span>Login          </span>
+            <Modal />
             <span>Signup         </span>
             </div>    
         </div>

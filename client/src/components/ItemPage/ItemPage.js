@@ -1,17 +1,17 @@
 //AD320- TeamAdams
-//UI Prototypes
-
+//Interaction Updates
 import React from 'react';
 import ItemHeader from '../ItemHeader/ItemHeader';
 import './ItemPage.css';
 import ItemRow from '../ItemRow/ItemRow';
-import MAP from '../itemPage_components/google.jpg';
 import PHOTO from '../itemPage_components/photo.jpg';
+import Container from '../googleMap/googleMap';
+//import { Button, TextField } from '@material-ui/core';
 
 const itemPage = (props) => {
     return (
         <div className="itemPage">
-            <ItemHeader/ >  
+            <ItemHeader/ > 
             <div className="description">
                 <div className="photo">
                     <h2>Name of Item</h2>
@@ -26,7 +26,9 @@ const itemPage = (props) => {
             </div>
             <div className="map">
                 <h3>Location</h3>
-                <img src={MAP} alt="Location" width="250" ></img> 
+                <div className="overMap">
+                <Container />
+                </div>
             </div>
             <div className="similarItems">
                 <h4>Other Similar Items</h4>
@@ -35,5 +37,4 @@ const itemPage = (props) => {
         </div>
     )
 };
-
 export default itemPage;
