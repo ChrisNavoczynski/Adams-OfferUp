@@ -16,7 +16,7 @@ export class Container extends React.Component {
             google={this.props.google}
             zoom={14}
             style={mapStyles}
-            initialCenter={{lat: -1.2884, lng: 36.8233}}
+            initialCenter={{lat: 47.6062, lng: -122.3321}}
         />
       </div>
     );
