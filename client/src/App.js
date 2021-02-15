@@ -24,11 +24,7 @@ class App extends Component {
           <hr/>
           <ItemPage/>
           <hr/>
-          <hr/>
-          <LoginModal/>
-          <hr/>
           <ContactForm/>
-
       </div>
     );
   }
