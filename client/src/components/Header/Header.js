@@ -5,36 +5,28 @@ import {
     InputBase,
     Typography,
     Toolbar } from "@material-ui/core";
+    import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-
-//import Logo from "../Logo/Logo";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '90%',
-        flexGrow: 1
+        width: '100%',
+        flexGrow: 1,
     },
     toolbar: {
         backgroundColor: '#80cbc4',
-        textDecoration: 'none'
-    },
-    link: {
-        textDecoration: 'none',
-        color: 'black',
     },
     title: {
+        width: "100%",
+        color: "black",
         margin: theme.spacing(2),
-        width: '30%',
-        fontWeight: 'bold',
-        paddingLeft: '5px',
-        textAlign: 'left',
     },
     search: {
         borderRadius: theme.shape.borderRadius,
         paddingLeft: '5px',
         textAlign: 'left',
         margin: theme.spacing(2),
-        width: '30%',
+        width: '50%',
         backgroundColor: '#b2dfdb',
     },
     sideButton: {
@@ -43,7 +35,9 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         margin: theme.spacing(2),
     },
-
+    logo: {
+        fontWeight: "bold",
+    },
 }));
 
 export default function Header() {
@@ -52,31 +46,34 @@ export default function Header() {
         <div className={classes.root}>
             <AppBar position="static" >
                 <Toolbar className={classes.toolbar}>
-                    {/** <Logo></Logo> */}
-                    {/** placeholder for Logo */}
-                    <Typography className={classes.title} variant="h3">
-                        <a className={classes.link} href="/home">
-                        OfferUpClone
-                        </a>
-                    </Typography>
+                    <Link 
+                      underline="none"
+                      to="/"
+                      color="inherit">
+                        <Button >
+                            <Typography className={classes.logo} variant="h4">
+                                AdamsOfferUp
+                            </Typography>
+                        </Button>
+                    </Link>
                     <div className={classes.search}>
-                        <InputBase placeholder="Search..." />
+                        <InputBase placeholder="Search..." fullWidth="true"/>
                     </div>
-                    <a className={classes.link} href="/helppage">
+                    <Link to="/helppage">
                         <Button className={classes.sideButton}>
                             How it Works
                         </Button>
-                    </a>
-                    <a className={classes.link} href="/login">
+                    </Link>
+                    <Link to="/login">
                         <Button className={classes.sideButton}>
                             Log In
                         </Button>
-                    </a>
-                    <a className={classes.link} href="/signup">
+                    </Link>
+                    <Link to="/signup">
                         <Button className={classes.sideButton}>
                             Sign Up
                         </Button>
-                    </a>
+                    </Link>
                 </Toolbar>
             </AppBar>
         </div>
