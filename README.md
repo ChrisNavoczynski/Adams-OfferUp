@@ -8,7 +8,8 @@
 * Dylan Wilkinson
 
 ## CRUD Ops and Validation:
-* Implement validation on both the client and server
+* Implement validation on both the client and server!
+
 
 ## Application Description: Web app for resale use.
 ### Supports:
