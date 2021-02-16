@@ -1,4 +1,4 @@
-//This has been updated
+
 exports.products = [
     {selectItem: "Specific Item name"},
     {id: "7", name: "Selected Item id=7", price: 80, photo: "link", available: true,

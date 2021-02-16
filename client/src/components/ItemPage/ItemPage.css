@@ -10,7 +10,7 @@
 }
 
 .photo {
-    width: 30%;
+    width: 60%;
     float: left;
 }
 
@@ -18,6 +18,14 @@
     width: 60%;
     float: right;
     text-align: left;
+}
+
+.ContactPage {
+    float: right;
+    width: 300px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 30px;
 }
 
 .map {
