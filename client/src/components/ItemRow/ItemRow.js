@@ -28,6 +28,12 @@ const itemRow = (props) => {
             location: `your mom's house`,
             name: 'A Hat',
             price: 150,
+        },
+        { 
+            id: '4',
+            location: 'the alley',
+            name: 'A Mat',
+            price: 0,
         }
     ]
     return (
@@ -36,7 +42,7 @@ const itemRow = (props) => {
          spacing={3}
          > 
             {items.map((item) => (
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                     <ItemCard item={item}/>
                 </Grid>
             ))}
