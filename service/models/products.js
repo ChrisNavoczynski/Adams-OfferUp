@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const postSchema = new mongoose.Schema({
+const itemSchema = new mongoose.Schema({
     itemName: {type: String, required: true},
     categoryType: [String],
     available: {type: Boolean, default: true},
@@ -11,6 +11,6 @@ const postSchema = new mongoose.Schema({
   });
 
 
-const Products = mongoose.model('Products', postSchema);
+const Products = mongoose.model('Products', itemSchema);
 
 module.exports = Products;
