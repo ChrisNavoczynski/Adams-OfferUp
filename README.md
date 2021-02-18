@@ -8,11 +8,11 @@
 * Dylan Wilkinson
 
 ## Integrating Auth0 and Google Maps:
-###Client App:
+### Client App:
 * Offer Login, sign up, and logout buttons
 * One route require authentication
 * route the user back to approciate location
-###Service App:
+### Service App:
 * Require Authentication token for at least one resource
 * create and maintain a user profile that can only be edited by user or admin
 
