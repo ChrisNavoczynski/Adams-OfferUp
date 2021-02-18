@@ -9,6 +9,7 @@ import HelpPage from './components/HelpPage/helpPage';
 import ContactSeller from './components/ContactSeller/ContactSeller';
 // import LoginModal from './components/LoginModal/logIn';
 // import Register from './components/Register/register';
+import MessageUser from './components/MessageUser/MessageUser';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/helppage">
             <HelpPage />
+          </Route>
+          <Route path="/messageuser">
+            <MessageUser />
           </Route>
           <Route path="/contactseller">
             {/** this will have to be set up from item page
