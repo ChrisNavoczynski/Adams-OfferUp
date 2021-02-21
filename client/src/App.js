@@ -1,6 +1,6 @@
 // AD320- TeamAdams
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import React from "react";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react';
 import './App.css';
 import ItemRow from './components/ItemRow/ItemRow';
 import Header from './components/Header/Header';
@@ -25,7 +25,7 @@ function App() {
           <Route path="/contactseller">
             {/** this will have to be set up from item page
             and from seller page with appropriate props being fed,
-            this form opens a new tab which we probably don't want*/}
+            this form opens a new tab which we probably don't want */}
             <ContactSeller />
           </Route>
           <Route path="/login">
