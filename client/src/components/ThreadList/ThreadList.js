@@ -1,11 +1,11 @@
 import React from 'react';
-import Message from '../Message/Message';
+import UserThread from '../UserThread/UserThread';
 
 import {
     Grid,
  } from '@material-ui/core';
 
-const MessageList = (props) => {
+const ThreadList = (props) => {
     const messages = [
         { 
             id: '1',
@@ -43,11 +43,11 @@ const MessageList = (props) => {
          > 
             {messages.map((message) => (
                 <Grid item xs={3}>
-                    <Message message={message}/>
+                    <UserThread message={message}/>
                 </Grid>
             ))}
         </Grid>
     )
 };
 
-export default MessageList;
+export default ThreadList;
