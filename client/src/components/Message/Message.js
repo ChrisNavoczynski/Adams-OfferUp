@@ -11,7 +11,7 @@ import { Card,
 const useStyles = makeStyles((theme) => ({
     card: {
         margin: theme.spacing(2),
-        backgroundColor: "#b2dfdb",
+        backgroundColor: "#FAF6F5",
     },
 }));
 
@@ -20,9 +20,9 @@ const Message = (props) => {
     return (
             <Card className={classes.card} variant="outlined">
                 <CardContent >
-                    <Typography>From: </Typography>
-                    <Typography>Subject: </Typography>
-                    <Typography>Message: </Typography>
+                    <Typography>From: {props.message.from}</Typography>
+                    <Typography>Subject: {props.message.subject}</Typography>
+                    <Typography>Message: {props.message.message}</Typography>
                 </CardContent>
             </Card>
     )
