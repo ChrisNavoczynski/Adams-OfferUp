@@ -4,8 +4,8 @@
         "es2021": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -18,11 +18,11 @@
         "react"
     ],
     "rules": {
-        "jsx-a11y/label-has-associated-control": ["warn"],
+        "jsx-a11y/label-has-associated-control": 0,
         "no-unused-vars": ["warn"],
         "react/jsx-filename-extension": ["warn"],
         "react/prefer-stateless-function": ["warn"],
         "react/destructuring-assignment": ["warn"],
-        "react/prop-types": ["warn"]
+        "react/prop-types": ["warn"] 
     }
 }
