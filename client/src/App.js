@@ -11,7 +11,6 @@ import ContactSeller from './components/ContactSeller/ContactSeller';
 // import Register from './components/Register/register';
 import MessageUser from './components/MessageUser/MessageUser';
 import MessageList from './components/MessageList/MessageList';
-import Message from './components/Message/Message';
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
             <HelpPage />
           </Route>
           <Route path="/messageuser">
-            <Message />
             <MessageList />
             <MessageUser />
           </Route>

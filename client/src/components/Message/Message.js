@@ -22,7 +22,7 @@ const Message = (props) => {
                 <CardContent >
                     <Typography>From: </Typography>
                     <Typography>Subject: </Typography>
-                    <Typography>Message: {props.}</Typography>
+                    <Typography>Message: </Typography>
                 </CardContent>
             </Card>
     )

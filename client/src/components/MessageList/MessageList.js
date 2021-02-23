@@ -5,7 +5,7 @@ import {
     Grid,
  } from '@material-ui/core';
 
-const MessageUser = (props) => {
+const MessageList = (props) => {
     const messages = [
         { 
             id: '1',
@@ -35,7 +35,8 @@ const MessageUser = (props) => {
     return (
         <Grid
          container item direction="row"
-         spacing={3} >
+         spacing={3}
+         > 
             {messages.map((message) => (
                 <Grid item xs={3}>
                     <Message message={message}/>
@@ -45,4 +46,4 @@ const MessageUser = (props) => {
     )
 };
 
-export default MessageUser;
+export default MessageList;

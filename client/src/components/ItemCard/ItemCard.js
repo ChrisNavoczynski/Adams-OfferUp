@@ -34,9 +34,9 @@ const ItemCard = (props) => {
                     to={"/product/" + productID}>
                 <CardContent >
                     <img src={Photo} alt="item" className={classes.image}/>
-                        <Typography>{props.item.name}</Typography>
-                        <Typography>{props.item.location}</Typography>
-                        <Typography>Price: {props.item.price}</Typography>
+                    <Typography>{props.item.name}</Typography>
+                    <Typography>{props.item.location}</Typography>
+                    <Typography>Price: {props.item.price}</Typography>
                 </CardContent>
                 </Link>
             </Card>
