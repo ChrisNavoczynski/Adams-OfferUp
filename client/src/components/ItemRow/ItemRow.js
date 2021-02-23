@@ -41,7 +41,7 @@ const itemRow = (props) => {
       spacing={3}
     >
       {items.map((item) => (
-        <Grid item xs={3} key = {item.id}>
+        <Grid item xs={3} key={item.id}>
           <ItemCard item={item} />
         </Grid>
       ))}
