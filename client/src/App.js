@@ -6,9 +6,10 @@ import ItemRow from './components/ItemRow/ItemRow';
 import Header from './components/Header/Header';
 import ItemPage from './components/ItemPage/ItemPage';
 import HelpPage from './components/HelpPage/helpPage';
-import ContactSeller from './components/ContactSeller/ContactSeller';
 // import LoginModal from './components/LoginModal/logIn';
 // import Register from './components/Register/register';
+import MessageUser from './components/MessageUser/MessageUser';
+import ThreadList from './components/ThreadList/ThreadList';
 
 function App() {
   return (
@@ -19,14 +20,17 @@ function App() {
           <Route path="/product/:id">
             <ItemPage />
           </Route>
+          <Route path="/thread/:id">
+            {/** individual message thread */}
+          </Route>
           <Route path="/helppage">
             <HelpPage />
           </Route>
-          <Route path="/contactseller">
-            {/** this will have to be set up from item page
-            and from seller page with appropriate props being fed,
-            this form opens a new tab which we probably don't want */}
-            <ContactSeller />
+          <Route path="/threadlist">
+            <ThreadList />
+          </Route>
+          <Route path="/messageuser">
+            <MessageUser />
           </Route>
           <Route path="/login">
             {/** login component */}
