@@ -34,7 +34,7 @@ function App() {
           </Route>
           <Route path="/signup">
             {/** signup component */}
-            {/** <Register /> */}
+            {/** <SignUp /> */}
           </Route>
           <Route exact path="/">
             {/** this will be replaced by a component with random items */}
