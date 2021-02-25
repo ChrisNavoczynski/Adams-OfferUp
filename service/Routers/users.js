@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require("express");
 const usersRouter = express.Router();
 
-const usersData = require('../data/usersData');
+const usersData = require("../data/usersData");
 
-usersRouter.route('/')
+usersRouter.route("/")
     .get((req, res, next) => {
         res.status(200);
         res.json(usersData.usersList);
@@ -17,11 +17,11 @@ usersRouter.route('/')
         res.sendStatus(201); // created
     });
 
-usersRouter.route('/:id')
+usersRouter.route("/:id")
     .get((req, res, next) => {
         const matchingUsers = usersData.usersList.filter((user) => {
-            return req.params['id'] === user.id;
-        })
+            return req.params["id"] === user.id;
+        });
         if (matchingUsers.length === 1) {
             res.status(200);
             res.send(matchingUsers[0]);
