@@ -11,6 +11,7 @@ const cors = require("cors");
 
 const productsRouter = require("./routers/products");
 const usersRouter = require("./routers/users");
+const messagesRouter = require("./Routers/messages");
 
 //mongoDB Connection
 const user = process.env.MONGO_USER;
@@ -24,16 +25,16 @@ mongoose
   );
 
 const db = mongoose.connection;
-db.on("error", () => debug("Error in MongoDB connection"));
-db.on("close", () => { debug("Closed MongoDB connection"); 
-});
+db.on("error", (err) => { console.log(`MongoDB connection error: ${err}`); });
+db.on("close", () => { console.log("MongoDB connection closed"); });
 
-app.use(morgan('tiny'));
+app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
 
 app.use("/v1/users", usersRouter);
 app.use("/v1/products", productsRouter);
+app.use("/v1/messages", messagesRouter);
 
 //Update products
 app.post("/v2/products", (req, res) => {
@@ -42,6 +43,10 @@ app.post("/v2/products", (req, res) => {
 app.post("/v2/users", (req, res) => {
     res.status(501);
     res.send("New user update");
+});
+app.post("/v2/messages", (req, res) => {
+    res.status(501);
+    res.send("New message");
 });
 app.listen(port, () => {
     console.log(`My app is listening at http://localhost:${port}`);
