@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 require("dotenv").config({ path: `${__dirname}/../.env` });
 
-const messagesData = require("./messages");
+const usersData = require("./usersData");
 
-const Messages = require("../models/messages");
+const User = require("../models/users");
 
-messagesData.messagesList.forEach((message) => {
-    Messages.create(message).catch((err) => console.log(err));
+usersData.usersList.forEach((user) => {
+    User.create(user).catch((err) => console.log(err));
 });
 
 const user = process.env.MONGO_USER;
