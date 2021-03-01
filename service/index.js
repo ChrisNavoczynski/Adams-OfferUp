@@ -10,7 +10,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 const productsRouter = require("./routers/products");
-const usersRouter = require("./routers/users");
+const usersRouter = require("./Routers/users");
 const messagesRouter = require("./Routers/messages");
 
 //mongoDB Connection
@@ -32,9 +32,9 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
 
-app.use("/v1/users", usersRouter);
 app.use("/v1/products", productsRouter);
 app.use("/v1/messages", messagesRouter);
+app.use("/v1/users", usersRouter);
 
 //Update products
 app.post("/v2/products", (req, res) => {
