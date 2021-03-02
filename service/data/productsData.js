@@ -50,7 +50,7 @@ exports.productListing = [
         itemName: "Masters of the Universe Mini-Comics",
         categoryType: ["Collectables"],
         available: true,
-        price: 150.00,
+        price: 100.00,
         description: "Set of 25 Comicbooks from the 80s"
     },
     
@@ -65,20 +65,20 @@ exports.productListing = [
 
     {
         id: 8,
-        itemName: "LOTR Extended Movie Box Set",
-        categoryType: ["Electronics"],
-        available: true,
-        price: 70.00,
-        description: "Blu-Ray Extended versions of LOTR trilogy"
-    },
-
-    {
-        id: 9,
         itemName: "Mounted Cat Loungers",
         categoryType: ["Pets"],
         available: true,
         price: 50.00,
         description: "Set of two wall mounted cat shelves"
+    },
+
+    {
+        id: 9,
+        itemName: "LOTR Extended Movie Box Set",
+        categoryType: ["Electronics"],
+        available: true,
+        price: 50.00,
+        description: "Blu-Ray Extended versions of LOTR trilogy"
     },
 
     {
