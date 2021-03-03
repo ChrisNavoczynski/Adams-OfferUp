@@ -2,7 +2,7 @@ const Messages = require("../models/messages");
 
 // @desc    get all messages
 // @route   GET /api/v1/messages
-// @access  Public
+// @access  Private
 exports.getMessages = (req, res, next) => {
     res
         .status(200)
@@ -11,26 +11,46 @@ exports.getMessages = (req, res, next) => {
 
 // @desc    get a message
 // @route   GET /api/v1/messages/:id
-// @access  Public
+// @access  Private
 exports.getMessage = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: `show message ${req.params.id}`});
+    Messages.findById(req.params.id, (error, message) => {
+        if (error) {
+            res
+                .status(404)
+                .send({ error: "cannot find message" });
+        } else if (message) {
+            res
+                .status(200)
+                .send(message);
+        } else {
+            next();
+        }
+    });
 };
 
-// @desc    create user
-// @route   POST /api/v1/users
+// @desc    create a message
+// @route   POST /api/v1/messages
 // @access  Private
 exports.createMessage = (req, res, next) => {
-    if (req.body.to == null || req.body.from == null) {
+    if (req.body.to == null || req.body.to.trim().length === 0) {
         res
             .status(406)
-            .send({error: "Must have to and from"});
+            .send({ error: "Must have a recipient" });
     }
-    if (req.body.subject == null || req.body.message == null) {
+    if (req.body.from == null || req.body.from.trim().length === 0) {
         res
             .status(406)
-            .send({error: "Must have subject and message"});
+            .send({ error: "Must have a sender" });
+    }
+    if (req.body.subject == null || req.body.subject.trim().length === 0) {
+        res
+            .status(406)
+            .send({ error: "Must have a subject" });
+    }
+    if (req.body.message == null || req.body.message.trim().length === 0) {
+        res
+            .status(406)
+            .send({ error: "Must have a message" });
     }
 
     const message = {
@@ -55,17 +75,25 @@ exports.createMessage = (req, res, next) => {
 // @desc    update message
 // @route   PUT /api/v1/messages/:id
 // @access  Private
-exports.updateMessage = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: `update message ${req.params.id}` });
+exports.updateMessage = (res) => {
+    res.sendStatus(501);
 };
 
 // @desc    delete message
 // @route   DELETE /api/v1/messages/:id
 // @access  Private
 exports.deleteMessage = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: `delete message ${req.params.id}` });
+    Messages.findByIdAndDelete(req.params.id, (error, message) => {
+        if (error) {
+            res
+                .status(404)
+                .send({ error: "cannot find message" });
+        } else if (message) {
+            res
+                .status(200)
+                .send({ success: true, msg: `delete message ${req.params.id}` });
+        } else {
+            next();
+        }
+    });  
 };
