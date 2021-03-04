@@ -8,6 +8,8 @@ const { getMessages,
 
 const router = express.Router();
 
+//insert middleware to run awt check for use with the following router functions
+
 router
     .route("/")
     .get(getMessages)
