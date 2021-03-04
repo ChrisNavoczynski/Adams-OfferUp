@@ -4,9 +4,19 @@ const Messages = require("../models/messages");
 // @route   GET /api/v1/messages
 // @access  Private
 exports.getMessages = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: "show all messages" });
+    Messages.find( {}, (error, messages) => {
+        if (error) {
+            res
+                .status(404)
+                .send({ error: "cannot find messages" });
+        } else if (messages) {
+            res
+                .status(200)
+                .send(messages);
+        } else {
+            next();
+        }
+    });
 };
 
 // @desc    get a message
