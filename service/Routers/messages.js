@@ -1,4 +1,12 @@
 const express = require("express");
+const router = express.Router();
+const jwt = require("express-jwt");
+const jwksRsa = require("jwks-rsa");
+
+require("dotenv").config({ path: `${__dirname}/../.env` });
+const domain = process.env.AUTH_0_DOMAIN;
+const audience = process.env.AUTH_0_AUDIENCE;
+
 const { getMessages,
         getMessage,
         createMessage,
@@ -6,9 +14,19 @@ const { getMessages,
         deleteMessage
      } = require("../controllers/messages");
 
-const router = express.Router();
+const checkJwt = jwt({
+     secret: jwksRsa.expressJwtSecret({
+          cache: true,
+          rateLimit: true,
+          jwksRequestsPerMinute: 5,
+          jwksUri: `https://${domain}/.well-known/jwks.json`,
+     }),
+     audience: `${audience}`,
+     issuer: `https://${domain}/`,
+     algorithm: ["RS256"]
+});
 
-//insert middleware to run awt check for use with the following router functions
+router.use(checkJwt);
 
 router
     .route("/")

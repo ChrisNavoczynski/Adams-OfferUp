@@ -4,17 +4,17 @@ const Messages = require("../models/messages");
 // @route   GET /api/v1/messages
 // @access  Private
 exports.getMessages = (req, res, next) => {
-    Messages.find( {}, (error, messages) => {
+    Messages.find({ users: req.body.user }, (error, messages) => {
         if (error) {
-            res
-                .status(404)
-                .send({ error: "cannot find messages" });
+            next(error);
         } else if (messages) {
             res
                 .status(200)
                 .send(messages);
         } else {
-            next();
+            res
+                .status(404)
+                .send({ error: "cannot find messages" });
         }
     });
 };
@@ -25,15 +25,15 @@ exports.getMessages = (req, res, next) => {
 exports.getMessage = (req, res, next) => {
     Messages.findById(req.params.id, (error, message) => {
         if (error) {
-            res
-                .status(404)
-                .send({ error: "cannot find message" });
+            next(error);
         } else if (message) {
             res
                 .status(200)
                 .send(message);
         } else {
-            next();
+            res
+                .status(404)
+                .send({ error: "cannot find message" });
         }
     });
 };
@@ -95,15 +95,15 @@ exports.updateMessage = (res) => {
 exports.deleteMessage = (req, res, next) => {
     Messages.findByIdAndDelete(req.params.id, (error, message) => {
         if (error) {
-            res
-                .status(404)
-                .send({ error: "cannot find message" });
+            next(error);
         } else if (message) {
             res
                 .status(200)
                 .send({ success: true, msg: `delete message ${req.params.id}` });
         } else {
-            next();
+            res
+            .status(404)
+            .send({ error: "cannot find message" });
         }
     });  
 };
