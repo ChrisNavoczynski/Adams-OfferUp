@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import Auth0ButtonGroup from '../Auth0/Auth0ButtonSet';
+import AuthButtonGroup from '../Auth0/AuthButtonGroup';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -68,7 +68,7 @@ export default function Header() {
             </Button>
           </Link>
 
-          <Auth0ButtonGroup />
+          <AuthButtonGroup />
         </Toolbar>
       </AppBar>
     </div>
