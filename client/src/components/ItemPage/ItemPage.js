@@ -1,7 +1,4 @@
-// AD320- TeamAdams
-// Interaction Updates
 import React from 'react';
-import ItemHeader from '../ItemHeader/ItemHeader';
 import './ItemPage.css';
 import ItemRow from '../ItemRow/ItemRow';
 import PHOTO from '../itemPage_components/photo.jpg';
@@ -10,7 +7,6 @@ import '../ContactSeller/ContactSeller';
 
 const itemPage = (props) => (
   <div className="itemPage">
-    <ItemHeader />
     <div className="description">
       <div className="photo">
         <h2>Name of Item</h2>

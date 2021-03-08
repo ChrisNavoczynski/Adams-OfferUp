@@ -1,6 +1,4 @@
 const Products = require("../models/products");
-const { findLocation } = require('../utils/GoogleMapsWrapper');
-const debug = require('debug')('api');
 
 exports.createProduct = (req, res, next) => {
     if (req.body.itemName.trim().length === 0) {
@@ -12,18 +10,6 @@ exports.createProduct = (req, res, next) => {
         res.send({error: "Price cannot be zero $ or lower"});
     }
 
-let geocodedLocation;
-if (req.body.locationType === 'Seller Location') {
-    try {
-        geocodedLocation = await findLocation(req.body.location);
-        debug(`Geocoded Location ${geocodedLocation}`);
-    } catch (err) {
-        res.status(404);
-        res.send({ error: 'Not a valid location' });
-        debug(`Error in location ${err}`);
-      }
-    }
-
 const categoryType = req.body.categoryType;
 const categoryArr = categoryType.split(",");
     
@@ -32,7 +18,7 @@ const product = {
     categoryType: categoryArr,
     price: req.body.price,
     description: req.body.description,
-    location: geocodedLocation,
+    //location: geocodedLocation,
     seller: req.body.seller
 };
 
