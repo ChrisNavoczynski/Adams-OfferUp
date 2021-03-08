@@ -1,5 +1,3 @@
-// Chris Navoczynski Item Page Prototype
-
 import React from 'react';
 import './itemTemplate.css';
 

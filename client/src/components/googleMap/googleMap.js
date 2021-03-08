@@ -1,6 +1,5 @@
-// Created by Chris NAvoczynski
 import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, GoogleMapReact } from 'google-maps-react';
 
 const mapStyles = {
   width: '60%',

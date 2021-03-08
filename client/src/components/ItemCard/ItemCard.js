@@ -1,5 +1,3 @@
-// AD320- TeamAdams
-// UI Prototypes
 
 import React from 'react';
 import './ItemCard.css';
