@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
+import Auth0ButtonGroup from '../Auth0/Auth0ButtonSet';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,16 +67,8 @@ export default function Header() {
               How it Works
             </Button>
           </Link>
-          <Link to="/login">
-            <Button className={classes.sideButton}>
-              Log In
-            </Button>
-          </Link>
-          <Link to="/signup">
-            <Button className={classes.sideButton}>
-              Sign Up
-            </Button>
-          </Link>
+
+          <Auth0ButtonGroup />
         </Toolbar>
       </AppBar>
     </div>

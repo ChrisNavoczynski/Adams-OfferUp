@@ -1,17 +1,22 @@
 // AD320- TeamAdams
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 import './App.css';
 import ItemRow from './components/ItemRow/ItemRow';
 import Header from './components/Header/Header';
 import ItemPage from './components/ItemPage/ItemPage';
 import HelpPage from './components/HelpPage/helpPage';
-// import LoginModal from './components/LoginModal/logIn';
-// import Register from './components/Register/register';
+import Loading from './components/Loading/Loading';
 import MessageUser from './components/MessageUser/MessageUser';
 import ThreadList from './components/ThreadList/ThreadList';
 
 function App() {
+  const { isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <BrowserRouter>
       <div className="App">
@@ -31,14 +36,6 @@ function App() {
           </Route>
           <Route path="/messageuser">
             <MessageUser />
-          </Route>
-          <Route path="/login">
-            {/** login component */}
-            {/** <LoginModal /> */}
-          </Route>
-          <Route path="/signup">
-            {/** signup component */}
-            {/** <SignUp /> */}
           </Route>
           <Route exact path="/">
             {/** this will be replaced by a component with random items */}
