@@ -21,9 +21,9 @@ const checkJwt = jwt({
           jwksRequestsPerMinute: 5,
           jwksUri: `https://${domain}/.well-known/jwks.json`,
      }),
-     audience: `${audience}`,
-     issuer: `https://${domain}/`,
-     algorithm: ["RS256"]
+     audience: `https://${audience}`,
+     issuer:  `https://${domain}/`,
+     algorithms: ["RS256"],
 });
 
 router.use(checkJwt);

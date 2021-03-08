@@ -1,15 +1,14 @@
 const mongoose = require("mongoose");
 
 const messageSchema = new mongoose.Schema({
-    to: mongoose.Types.ObjectId,
-    from: mongoose.Types.ObjectId,
+    from: { type: String, required: true },
     subject: { type: String, required: true },
     message: { type: String, required: true },
     timestamp: { type: Date, default: Date.now },
 });
 
 const messagesSchema = new mongoose.Schema({
-    users: [{ user: { type: mongoose.Schema.Types.ObjectId, required: true } }],
+    users: [String],
     messages: [messageSchema],
 });
 
