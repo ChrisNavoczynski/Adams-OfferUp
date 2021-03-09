@@ -4,17 +4,17 @@ const Messages = require("../models/messages");
 // @route   GET /api/v1/messages
 // @access  Private
 exports.getMessages = (req, res, next) => {
-    Messages.find( {}, (error, messages) => {
+    Messages.find({ users: req.body.user }, (error, messages) => {
         if (error) {
-            res
-                .status(404)
-                .send({ error: "cannot find messages" });
+            next(error);
         } else if (messages) {
             res
                 .status(200)
                 .send(messages);
         } else {
-            next();
+            res
+                .status(404)
+                .send({ error: "cannot find messages" });
         }
     });
 };
@@ -25,15 +25,15 @@ exports.getMessages = (req, res, next) => {
 exports.getMessage = (req, res, next) => {
     Messages.findById(req.params.id, (error, message) => {
         if (error) {
-            res
-                .status(404)
-                .send({ error: "cannot find message" });
+            next(error);
         } else if (message) {
             res
                 .status(200)
                 .send(message);
         } else {
-            next();
+            res
+                .status(404)
+                .send({ error: "cannot find message" });
         }
     });
 };
@@ -64,13 +64,19 @@ exports.createMessage = (req, res, next) => {
     }
 
     const message = {
-        to: req.body.to,
+        // TODO: replace with current authenticated user
         from: req.body.from,
         subject: req.body.subject,
         message: req.body.message
     };
-    
-    Messages.create(message)
+
+    const messages = {
+        // TODO: add current authenticated user
+        users: [req.body.to, req.body.from],
+        messages: [message],
+    };
+
+    Messages.create(messages)
         .then((newMessage) => {
             res
                 .status(200)
@@ -85,8 +91,45 @@ exports.createMessage = (req, res, next) => {
 // @desc    update message
 // @route   PUT /api/v1/messages/:id
 // @access  Private
-exports.updateMessage = (res) => {
-    res.sendStatus(501);
+exports.updateMessage = (req, res, next) => {
+    if (req.body.from == null || req.body.from.trim().length === 0) {
+        res
+            .status(406)
+            .send({ error: "Must have a sender" });
+    }
+    if (req.body.message == null || req.body.message.trim().length === 0) {
+        res
+            .status(406)
+            .send({ error: "Must have a message" });
+    }
+
+    // push new message onto messages array
+    const update = {
+        $push: {
+            messages: {
+                // TODO: add current authenticated user
+                from: req.body.from,
+                message: req.body.message
+            }
+        }
+    };
+
+    // return the modified document rather than the original.
+    const options = { new: true };
+    
+    Messages.findByIdAndUpdate(req.params.id, update, options, (error, messages) => {
+        if (error) {
+            next(error);
+        } else if (messages) {
+            res
+                .status(200)
+                .send(messages);
+        } else {
+            res
+                .status(404)
+                .send({ error: "cannot find message" });
+        }
+    });
 };
 
 // @desc    delete message
@@ -95,15 +138,15 @@ exports.updateMessage = (res) => {
 exports.deleteMessage = (req, res, next) => {
     Messages.findByIdAndDelete(req.params.id, (error, message) => {
         if (error) {
-            res
-                .status(404)
-                .send({ error: "cannot find message" });
+            next(error);
         } else if (message) {
             res
                 .status(200)
                 .send({ success: true, msg: `delete message ${req.params.id}` });
         } else {
-            next();
+            res
+            .status(404)
+            .send({ error: "cannot find message" });
         }
     });  
 };
