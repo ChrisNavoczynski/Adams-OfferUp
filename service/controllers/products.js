@@ -19,7 +19,7 @@ const product = {
     price: req.body.price,
     description: req.body.description,
     //location: geocodedLocation,
-    seller: req.body.seller
+    sellerInfo: req.body.seller
 };
 
 Products.create(product)

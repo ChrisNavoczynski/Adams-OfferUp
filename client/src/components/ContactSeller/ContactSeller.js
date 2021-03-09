@@ -29,7 +29,6 @@ const ContactForm = () => {
 
   return (
     <div>
-
       <form onSubmit={handleSubmit} className="Form">
         <h2>Contact Seller!</h2>
         <div>
