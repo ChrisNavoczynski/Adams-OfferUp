@@ -1,6 +1,5 @@
 exports.productListing = [
     {
-       id: 1,
        itemName: "Padded Gaming Chair",
        image: "/img/gamingchair.jpg",
        categoryType: ["Furniture"],
@@ -10,12 +9,12 @@ exports.productListing = [
        location: {
            visual: "Seattle, WA",
            latitude: 47.5562833,
-           longitude: -122.2672822
+           longitude: -122.2672822,
+        seller: "Stephen Kings"
        }
     },
 
     {
-        id: 2,
         itemName: "Marvel's Deadpool Figure",
         image: "/img/Deadpool.jpg",
         categoryType: ["Collectables"],
@@ -25,12 +24,12 @@ exports.productListing = [
         location: {
             visual: "Olympia, WA",
             latitude: 47.0530121,
-            longitude: -122.8903856
+            longitude: -122.8903856,
+        seller: "Ryan reynolders"
         }
     },
 
     {
-        id: 3,
         itemName: "Lego: Unsorted Bin",
         image: "/img/LegoBin.jpg",
         categoryType: ["Toys"],
@@ -40,12 +39,12 @@ exports.productListing = [
         location: {
             visual: "Mercer Island, WA",
             latitude: 47.5885737,
-            longitude: -122.2435174
+            longitude: -122.2435174,
+        seller: "Bruce Waynes"
         }
     },
 
     {
-        id: 4,
         itemName: "2016 Toyota 4runner",
         image: "/img/Toyota4runner.jpg",
         categoryType: ["Automotive"],
@@ -55,12 +54,12 @@ exports.productListing = [
         location: {
             visual: "Leavenworth, WA",
             latitude: 47.5978275,
-            longitude: -120.6688763
+            longitude: -120.6688763,
+        seller: "Selina Killer"
         }
     },
 
     {
-        id: 5,
         itemName: "Masters of the Universe Mini-Comics",
         image: "/img/MOTUComics.jpg",
         categoryType: ["Collectables"],
@@ -70,12 +69,12 @@ exports.productListing = [
         location: {
             visual: "Yakima, WA",
             latitude: 46.5847687,
-            longitude: -120.6083732
+            longitude: -120.6083732,
+        seller: "Capt. Chris Evant"
         }
     },
     
     {
-        id: 6,
         itemName: "D&D Planescape Box Set",
         image: "/img/PlanescapeBoxSet.jpg",
         categoryType: ["Collectables"],
@@ -85,12 +84,12 @@ exports.productListing = [
         location: {
             visual: "Kirkland, WA",
             latitude: 47.686113,
-            longitude: -122.216684
+            longitude: -122.216684,
+        seller: "Wanda Minimoff"
         }
     },
 
     {
-        id: 7,
         itemName: "Mounted Cat Loungers",
         image: "/img/catshelves.jpg",
         categoryType: ["Pets"],
@@ -100,12 +99,12 @@ exports.productListing = [
         location: {
             visual: "Bainbridge Island, WA",
             latitude: 47.630533,
-            longitude: -122.522436
+            longitude: -122.522436,
+        seller: "Thor Hammer"
         }
     },
 
     {
-        id: 8,
         itemName: "LOTR Extended Movie Box Set",
         image: "LOTRBox.jpg",
         categoryType: ["Electronics"],
@@ -115,12 +114,12 @@ exports.productListing = [
         location: {
             visual: "Seattle, WA",
             latitude: 47.6143275,
-            longitude: -122.33907002
+            longitude: -122.33907002,
+        seller: "Morgana LeFries"
         }
     },
 
     {
-        id: 9,
         itemName: "Acoustic Guitar",
         image: "guitar.jpg",
         categoryType: ["Instruments"],
@@ -130,12 +129,12 @@ exports.productListing = [
         location: {
             visual: "Seattle, WA",
             latitude: 47.6063546,
-            longitude: -122.3402312
+            longitude: -122.3402312,
+        seller: "Natasha Widow"
         }
     },
 
     {
-        id: 10,
         itemName: "Playstation 5",
         image: "ps5",
         categoryType: ["Electronics"],
@@ -145,7 +144,8 @@ exports.productListing = [
         location: {
             visual: "Redmond, WA",
             latitude: 47.674794,
-            longitude: -122.1226772
+            longitude: -122.1226772,
+        seller: "Vision Soulstone"
         }
     },
  ];

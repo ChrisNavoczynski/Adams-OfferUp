@@ -16,10 +16,11 @@ const categoryArr = categoryType.split(",");
 const product = {
     itemName: req.body.itemName,
     categoryType: categoryArr,
+    available: req.body.available,
     price: req.body.price,
     description: req.body.description,
-    //location: geocodedLocation,
-    sellerInfo: req.body.seller
+    location: req.body.location,
+    seller: req.body.seller
 };
 
 Products.create(product)
