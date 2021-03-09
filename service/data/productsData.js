@@ -89,4 +89,13 @@ exports.productListing = [
         price: 200.00,
         description: "Brand new strings, no scratches"
     },
+
+    {
+        id: 11,
+        itemName: "Duffle Bag",
+        categoryType: ["accessories"],
+        available: true,
+        price: 150.00,
+        description: "Never used before, brand new"
+    },
  ];

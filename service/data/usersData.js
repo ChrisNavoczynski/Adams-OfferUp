@@ -5,4 +5,5 @@ exports.usersList = [
     { lastName: "Degas", firstName: "Beau", accountID: "4" },
     { lastName: "Baby", firstName: "Angel", accountID: "5" },
     { lastName: "Arson", firstName: "Nicki", accountID: "6" },
+    { lastName:"Jackson", firstName: "William", accountID: "7"},
 ];

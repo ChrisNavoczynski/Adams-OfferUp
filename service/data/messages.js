@@ -7,4 +7,5 @@ exports.messagesList = [
     { to: "Arson Nicki", from: "Miss Texas", subject: "account activity", message: "I mean barely, heh." },
     { to: "Miss Texas", from: "Arson Nicki", subject: "account activity", message: "Just checking." },
     { to: "Betty Wetter", from: "Cookie Couture", subject: "Item 1", message: "Okay." },
+    {to: "Big Woadie", from: "Bill Jefferson", subject: "Item 3", message: "Hey it's Bill again"},
 ];
