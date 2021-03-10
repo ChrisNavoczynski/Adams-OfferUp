@@ -6,10 +6,10 @@ const itemsSchema = new mongoose.Schema({
     available: {type: Boolean, default: true},
     price: Number,
     description: String,
-    sellerInfo: {type: String, required: true},
-    initDate: {type: Date, default: Date.now},
+    location: String,
+    seller: {type: String, required: true}
   });
 
-const Products = mongoose.model("Products", itemsSchema);
+const Products = mongoose.model("products", itemsSchema);
 
 module.exports = Products;

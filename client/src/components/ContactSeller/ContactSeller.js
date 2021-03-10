@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ContactSeller.css';
-import ItemHeader from '../ItemHeader/ItemHeader';
 
 const ContactForm = () => {
   const [status, setStatus] = useState('Submit');
@@ -30,7 +29,6 @@ const ContactForm = () => {
 
   return (
     <div>
-      <ItemHeader />
       <form onSubmit={handleSubmit} className="Form">
         <h2>Contact Seller!</h2>
         <div>
