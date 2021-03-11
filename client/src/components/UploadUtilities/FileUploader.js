@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   imageUploader: {
-    width: '10vw',
+    width: '10%',
     margin: theme.spacing(1),
   },
 }));
@@ -96,7 +96,7 @@ export default function FileUploader() {
         Upload
       </Button>
       <CircularProgress variant="determinate" value={uploadProgress} />
-      { error ? <div> Whoops! </div> : null }
+      { error ? <div> Something is not quite right! </div> : null }
     </div>
   );
 }
