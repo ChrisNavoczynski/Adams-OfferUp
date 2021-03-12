@@ -1,19 +1,32 @@
 const express = require("express");
 const multer = require("multer");
-const upload = multer({ dest: "../resources/images"});
+
+// directly taken from Jason's sample repo and adapted from resources
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "../service/resources/uploads");
+    },
+    filename: (req, file, cb) => {
+      cb(null, `${file.originalname}`);
+    },
+  });
+  
+const upload = multer({ storage: storage });
 const router = express.Router();
 
 router.route("/")
-    .post(upload.array("productImages", 6), (req, res, next) => {
+    .post(upload.single("image"), (req, res, next) => {
         try {
-            const images = req.files;
-            if (!images) {
+            const image = req.file;
+            if (!image) {
                 res
                     .status(400)
                     .send({ error: "no file selected" });
             } else {
-                res.send({ message: "success" });
-            }
+                res
+                    .status(200)
+                    .send({ message: "photo uploaded" });
+              }
         } catch (err) {
             next(err);
         }

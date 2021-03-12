@@ -12,6 +12,7 @@ const cors = require("cors");
 const productsRouter = require("./routers/products");
 const usersRouter = require("./Routers/users");
 const messagesRouter = require("./Routers/messages");
+const uploadRouter = require("./Routers/uploads");
 
 //mongoDB Connection
 const user = process.env.MONGO_USER;
@@ -35,6 +36,7 @@ app.use(express.json());
 app.use("/v1/products", productsRouter);
 app.use("/v1/messages", messagesRouter);
 app.use("/v1/users", usersRouter);
+app.use("/v1/uploads", uploadRouter);
 
 //Update products
 app.post("/v2/products", (req, res) => {
@@ -47,6 +49,10 @@ app.post("/v2/users", (req, res) => {
 app.post("/v2/messages", (req, res) => {
     res.status(501);
     res.send("New message");
+});
+app.post("/v2/uploads", (req, res) => {
+    res.status(501);
+    res.send("New upload");
 });
 app.listen(port, () => {
     console.log(`My app is listening at http://localhost:${port}`);

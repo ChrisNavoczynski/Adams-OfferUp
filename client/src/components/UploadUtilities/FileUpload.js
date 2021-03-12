@@ -1,5 +1,6 @@
 import axios from './AxiosWrapper';
 
+// directly taken from Jason's sample repo
 export default function useFileUpload(key, file, uploadProgressHandler) {
   const formData = new FormData();
   formData.append(key, file);

@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import {
   Button,
   Typography,
-  CircularProgress,
   makeStyles,
+  CircularProgress,
+  Container,
+  Grid,
 } from '@material-ui/core';
 
 import useFileUpload from './FileUpload';
 
+// directly taken from Jason's sample repo
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -18,8 +21,6 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   imageSelector: {
-    display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     margin: theme.spacing(1),
@@ -32,14 +33,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FileUploader() {
-  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [selectedFile, setSelectedFile] = useState(null);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [error, setError] = useState(null);
   const classes = useStyles();
 
-  const selectFiles = (event) => {
+  const selectFile = (event) => {
     const { files } = event.target;
-    setSelectedFiles(files);
+    setSelectedFile(files[0]);
   };
 
   const progressUpdater = (event) => {
@@ -47,12 +48,10 @@ export default function FileUploader() {
   };
 
   const upload = () => {
-    console.log('files to upload', selectedFiles);
-    if (selectedFiles) {
-      useFileUpload('image', selectedFiles, progressUpdater)
-        .then((response) => {
-          console.log(response.data.message);
-          setSelectedFiles(null);
+    if (selectedFile) {
+      useFileUpload('image', selectedFile, progressUpdater)
+        .then(() => {
+          setSelectedFile(null);
         })
         .catch((err) => {
           setError(err);
@@ -62,41 +61,44 @@ export default function FileUploader() {
   };
 
   return (
-    <div className={classes.root}>
-      <div className={classes.imageSelector}>
+    <Grid className={classes.root}>
+      <Container className={classes.imageSelector}>
         <label htmlFor="btn-upload">
           <input
             id="btn-upload"
             name="btn-upload"
             style={{ display: 'none' }}
             type="file"
-            onChange={selectFiles}
+            onChange={selectFile}
           />
           <Button
             variant="contained"
-            color="primary"
+            color="inherit"
             component="span"
           >
-            Choose an image:
+            Choose your image:
           </Button>
+          { !selectedFile
+            ? (<Typography> File Selected: none </Typography>)
+            : (
+              <Typography>
+                File Selected:
+                {` ${selectedFile.name}`}
+              </Typography>
+            ) }
         </label>
-        { selectedFiles ? (
-          <Typography>
-            {selectedFiles.name}
-          </Typography>
-        ) : <div>Select a File</div> }
-      </div>
+      </Container>
       <Button
         variant="contained"
-        color="primary"
+        color="inherit"
         className={classes.imageUploader}
-        disabled={!selectedFiles}
+        disabled={!selectedFile}
         onClick={upload}
       >
-        Upload
+        Give Us The Pic!
       </Button>
       <CircularProgress variant="determinate" value={uploadProgress} />
       { error ? <div> Something is not quite right! </div> : null }
-    </div>
+    </Grid>
   );
 }
