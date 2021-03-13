@@ -10,6 +10,7 @@ import HelpPage from './components/HelpPage/helpPage';
 // import Register from './components/Register/register';
 import MessageUser from './components/MessageUser/MessageUser';
 import ThreadList from './components/ThreadList/ThreadList';
+import FileUploader from './components/UploadUtilities/FileUploader';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/threadlist">
             <ThreadList />
+          </Route>
+          <Route path="/fileupload">
+            <FileUploader />
           </Route>
           <Route path="/messageuser">
             <MessageUser />
