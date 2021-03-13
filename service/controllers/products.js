@@ -11,11 +11,11 @@ exports.createProduct = (req, res, next) => {
     }
 
 const categoryType = req.body.categoryType;
-const categoryArr = categoryType.split(",");
+const [categoryArr] = categoryType.split(",");
     
 const product = {
     itemName: req.body.itemName,
-    categoryType: categoryArr,
+    categoryType: [categoryArr],
     available: req.body.available,
     price: req.body.price,
     description: req.body.description,

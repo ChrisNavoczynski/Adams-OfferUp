@@ -1,9 +1,10 @@
 import React from 'react';
+import { Grid } from '@material-ui/core';
 import './ItemPage.css';
 import ItemRow from '../ItemRow/ItemRow';
 import PHOTO from '../itemPage_components/photo.jpg';
-import '../googleMap/googleMap';
 import '../ContactSeller/ContactSeller';
+import MapLocation from '../MapLocation';
 
 const itemPage = (props) => (
   <div className="itemPage">
@@ -15,7 +16,6 @@ const itemPage = (props) => (
       <div className="list">
         <ul>Item Description</ul>
         <ul>Asking Price</ul>
-        <ul>Save to Favorites</ul>
       </div>
 
       <div className="Contact">
@@ -29,10 +29,11 @@ const itemPage = (props) => (
 
     <div className="map">
       <h3>Location</h3>
-      <div className="overMap">
-        <googleMap />
-      </div>
+      <Grid item>
+        <MapLocation />
+      </Grid>
     </div>
+
     <div className="similarItems">
       <h4>Other Similar Items</h4>
       <ItemRow />
