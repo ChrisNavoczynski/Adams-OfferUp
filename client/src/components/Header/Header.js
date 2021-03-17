@@ -3,7 +3,6 @@ import {
   AppBar,
   Button,
   InputBase,
-  Typography,
   Toolbar,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
@@ -34,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   sideButton: {
     width: '100px',
     backgroundColor: Colors.lightPurple,
+    fontSize: 18,
     fontWeight: 'bold',
     margin: theme.spacing(2),
     '&:hover': {
@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.shape.borderRadius,
     backgroundColor: Colors.lightPurple,
     padding: '5px',
+    fontSize: 32,
     fontWeight: 'bold',
     '&:hover': {
       color: 'black',
@@ -64,10 +65,8 @@ export default function Header() {
             to="/"
             color="inherit"
           >
-            <Button>
-              <Typography className={classes.logo} variant="h4">
-                AdamsOfferUp
-              </Typography>
+            <Button className={classes.logo}>
+              AdamsOfferUp
             </Button>
           </Link>
           <InputBase className={classes.search} placeholder="Search..." fullWidth />
