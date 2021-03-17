@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
+import Colors from '../../constants/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   toolbar: {
-    backgroundColor: '#80cbc4',
+    backgroundColor: Colors.teal,
   },
   title: {
     width: '100%',
@@ -28,16 +29,27 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     margin: theme.spacing(2),
     width: '50%',
-    backgroundColor: '#b2dfdb',
+    backgroundColor: Colors.lightTeal,
   },
   sideButton: {
     width: '100px',
-    backgroundColor: '#80cbc4',
+    backgroundColor: Colors.lightPurple,
     fontWeight: 'bold',
     margin: theme.spacing(2),
+    '&:hover': {
+      color: 'black',
+      backgroundColor: Colors.lightTeal,
+    },
   },
   logo: {
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: Colors.lightPurple,
+    padding: '5px',
     fontWeight: 'bold',
+    '&:hover': {
+      color: 'black',
+      backgroundColor: Colors.lightTeal,
+    },
   },
 }));
 
@@ -58,9 +70,7 @@ export default function Header() {
               </Typography>
             </Button>
           </Link>
-          <div className={classes.search}>
-            <InputBase placeholder="Search..." fullWidth="true" />
-          </div>
+          <InputBase className={classes.search} placeholder="Search..." fullWidth />
           <Link to="/helppage">
             <Button className={classes.sideButton}>
               How it Works
