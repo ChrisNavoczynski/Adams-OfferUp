@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
     flexGrow: 1,
@@ -18,21 +18,19 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     backgroundColor: '#80cbc4',
     fontWeight: 'bold',
+    justifyContent: 'space-between',
   },
   categories: {
-    backgroundColor: '#b2dfdb',
     fontWeight: 'bold',
     fontSize: 18,
   },
   sideButton: {
-    width: '100px',
-    backgroundColor: '#80cbc4',
     fontWeight: 'bold',
     fontSize: 18,
   },
   logo: {
-    fontSize: 32,
     fontWeight: 'bold',
+    fontSize: 32,
   },
 }));
 
@@ -62,7 +60,7 @@ export default function Header() {
               </Typography>
             </Button>
           </Link>
-          <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+          <Button className={classes.categories} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
             Categories
           </Button>
           <Menu
@@ -72,9 +70,9 @@ export default function Header() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Furniture</MenuItem>
-            <MenuItem onClick={handleClose}>Collectables</MenuItem>
-            <MenuItem onClick={handleClose}>Electronics</MenuItem>
+            <MenuItem component={Link} onClick={handleClose}>Furniture</MenuItem>
+            <MenuItem component={Link} onClick={handleClose}>Collectables</MenuItem>
+            <MenuItem component={Link} onClick={handleClose}>Electronics</MenuItem>
           </Menu>
           <Link to="/profile">
             <Button className={classes.sideButton}>
