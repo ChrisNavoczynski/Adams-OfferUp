@@ -5,7 +5,6 @@ import './App.css';
 import ItemRow from './components/ItemRow/ItemRow';
 import Header from './components/Header/Header';
 import ItemPage from './components/ItemPage/ItemPage';
-import HelpPage from './components/HelpPage/helpPage';
 // import LoginModal from './components/LoginModal/logIn';
 // import Register from './components/Register/register';
 import MessageUser from './components/MessageUser/MessageUser';
@@ -24,8 +23,8 @@ function App() {
           <Route path="/thread/:id">
             {/** individual message thread */}
           </Route>
-          <Route path="/helppage">
-            <HelpPage />
+          <Route path="/profile">
+            {/** user profile */}
           </Route>
           <Route path="/threadlist">
             <ThreadList />
