@@ -2,35 +2,45 @@ import React, { useState } from 'react';
 import {
   AppBar,
   Button,
-  Typography,
   Toolbar,
   Menu,
   MenuItem,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import Colors from '../../constants/colors';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     flexGrow: 1,
   },
   toolbar: {
-    backgroundColor: '#80cbc4',
+    backgroundColor: Colors.teal,
     fontWeight: 'bold',
     justifyContent: 'space-between',
+    padding: theme.spacing(3),
   },
   categories: {
     fontWeight: 'bold',
     fontSize: 18,
+    '&:hover': {
+      backgroundColor: Colors.lightTeal,
+    },
   },
   sideButton: {
     fontWeight: 'bold',
     fontSize: 18,
+    '&:hover': {
+      backgroundColor: Colors.lightTeal,
+    },
   },
   logo: {
     fontWeight: 'bold',
     fontSize: 32,
+    '&:hover': {
+      backgroundColor: Colors.lightTeal,
+    },
   },
 }));
 
@@ -54,10 +64,8 @@ export default function Header() {
             to="/"
             color="inherit"
           >
-            <Button>
-              <Typography className={classes.logo} variant="h4" aria-label="To Home Page">
-                AdamsOfferUp
-              </Typography>
+            <Button className={classes.logo} aria-label="To Home Page">
+              AdamsOfferUp
             </Button>
           </Link>
           <Button className={classes.categories} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
@@ -70,9 +78,9 @@ export default function Header() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem component={Link} onClick={handleClose}>Furniture</MenuItem>
-            <MenuItem component={Link} onClick={handleClose}>Collectables</MenuItem>
-            <MenuItem component={Link} onClick={handleClose}>Electronics</MenuItem>
+            <MenuItem component={Link} to="/furniture" onClick={handleClose}>Furniture</MenuItem>
+            <MenuItem component={Link} to="/collectables" onClick={handleClose}>Collectables</MenuItem>
+            <MenuItem component={Link} to="/electronics" onClick={handleClose}>Electronics</MenuItem>
           </Menu>
           <Link to="/profile">
             <Button className={classes.sideButton}>
