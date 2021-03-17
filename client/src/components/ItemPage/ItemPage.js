@@ -1,9 +1,12 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import {
+  Button,
+  Grid,
+} from '@material-ui/core';
 import './ItemPage.css';
 import ItemRow from '../ItemRow/ItemRow';
 import PHOTO from '../itemPage_components/photo.jpg';
-import '../ContactSeller/ContactSeller';
 import MapLocation from '../MapLocation';
 
 const itemPage = (props) => (
@@ -18,12 +21,16 @@ const itemPage = (props) => (
         <ul>Asking Price</ul>
       </div>
 
-      <div className="Contact">
-        <a href="../ContactSeller/ContactSeller.js" target="_blank">
-          <button type="button" className="ContactPage">
-            <p>Contact Seller</p>
-          </button>
-        </a>
+      <div className="ContactPage">
+        <Link
+          underline="none"
+          to="/messageuser"
+          color="inherit"
+        >
+          <Button>
+            Contact Seller
+          </Button>
+        </Link>
       </div>
     </div>
 
