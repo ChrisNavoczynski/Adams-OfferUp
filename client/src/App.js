@@ -18,33 +18,31 @@ function App() {
     return <Loading />;
   }
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route path="/product/:id">
-            <ItemPage />
-          </Route>
-          <Route path="/thread/:id">
-            {/** individual message thread */}
-          </Route>
-          <Route path="/helppage">
-            <HelpPage />
-          </Route>
-          <Route path="/threadlist">
-            <ThreadList />
-          </Route>
-          <Route path="/messageuser">
-            <MessageUser />
-          </Route>
-          <Route exact path="/">
-            {/** this will be replaced by a component with random items */}
-            <ItemRow />
-            <ItemRow />
-          </Route>
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Header />
+      <Switch>
+        <Route path="/product/:id">
+          <ItemPage />
+        </Route>
+        <Route path="/thread/:id">
+          {/** individual message thread */}
+        </Route>
+        <Route path="/helppage">
+          <HelpPage />
+        </Route>
+        <Route path="/threadlist">
+          <ThreadList />
+        </Route>
+        <Route path="/messageuser">
+          <MessageUser />
+        </Route>
+        <Route exact path="/">
+          {/** this will be replaced by a component with random items */}
+          <ItemRow />
+          <ItemRow />
+        </Route>
+      </Switch>
+    </div>
   );
 }
 
