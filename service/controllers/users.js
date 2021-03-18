@@ -4,18 +4,38 @@ const User = require("../models/users");
 // @route   GET /api/v1/users
 // @access  Public
 exports.getUsers = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: "show all users" });
+    User.find({ }, (error, users) => {
+        if (error) {
+            next(error);
+        } else if (users) {
+            res
+                .status(200)
+                .send(users);
+        } else {
+            res
+                .status(404)
+                .send({ error: "cannot find users" });
+        }
+    });
 };
 
 // @desc    get a user
 // @route   GET /api/v1/users/:id
 // @access  Public
 exports.getUser = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: `show user ${req.params.id}`});
+    User.findById(req.params.id, (error, user) => {
+        if (error) {
+            next(error);
+        } else if (user) {
+            res
+                .status(200)
+                .send(user);
+        } else {
+            res
+                .status(404)
+                .send({ error: "cannot find user" });
+        }
+    });
 };
 
 // @desc    create user
@@ -59,16 +79,38 @@ exports.createUser = (req, res, next) => {
 // @route   PUT /api/v1/users/:id
 // @access  Private
 exports.updateUser = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: `update user ${req.params.id}` });
+    const options = { new: true };
+    const update = req.body;
+    User.findByIdAndUpdate(req.params.id, update, options, (error, messages) => {
+        if (error) {
+            next(error);
+        } else if (messages) {
+            res
+                .status(200)
+                .send(messages);
+        } else {
+            res
+                .status(404)
+                .send({ error: "cannot find user" });
+        }
+    });
 };
 
 // @desc    delete user
 // @route   DELETE /api/v1/users/:id
 // @access  Private
 exports.deleteUser = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: `delete user ${req.params.id}` });
+    User.findByIdAndDelete(req.params.id, (error, message) => {
+        if (error) {
+            next(error);
+        } else if (message) {
+            res
+                .status(200)
+                .send({ success: true, msg: `delete user ${req.params.id}` });
+        } else {
+            res
+            .status(404)
+            .send({ error: "cannot find user" });
+        }
+    });
 };
