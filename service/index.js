@@ -33,29 +33,26 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
 
-app.use("api/v1/products", productsRouter);
-app.use("api/v1/messages", messagesRouter);
-app.use("api/v1/users", usersRouter);
-app.use("api/v1/uploads", uploadRouter);
+app.use("/api/v1/products", productsRouter);
+app.use("/api/v1/messages", messagesRouter);
+app.use("/api/v1/users", usersRouter);
+app.use("/api/v1/uploads", uploadRouter);
 
 //Update products
-app.post("api/v2/products", (req, res) => {
+app.post("/api/v2/products", (req, res) => {
     res.send("Future Updates Go Here!");
 });
-app.post("api/v2/users", (req, res) => {
+app.post("/api/v2/users", (req, res) => {
     res.status(501);
     res.send("New user update");
 });
-app.post("api/v2/messages", (req, res) => {
+app.post("/api/v2/messages", (req, res) => {
     res.status(501);
     res.send("New message");
 });
-app.post("api/v2/uploads", (req, res) => {
+app.post("/api/v2/uploads", (req, res) => {
     res.status(501);
     res.send("New upload");
 });
-app.listen(port, () => {
-    res.status(501);
-    console.log(`My app is listening at http://localhost:${port}`);
-});
+app.listen(port);
 
