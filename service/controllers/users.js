@@ -70,8 +70,9 @@ exports.createUser = (req, res, next) => {
                 .send({ userId: newUser._id, success: true, msg: "create new user" });
         })
         .catch((error) => {
-            console.log(error);
-            next(error);
+            res 
+            .status(406)
+            .send(error);
         });
 };
 

@@ -83,8 +83,9 @@ exports.createMessage = (req, res, next) => {
                 .send({ messageId: newMessage._id, success: true, msg: "create new message" });
         })
         .catch((error) => {
-            console.log(error);
-            next(error);
+            res
+                .status(406)
+                .send(error);
         });
 };
 
@@ -145,8 +146,8 @@ exports.deleteMessage = (req, res, next) => {
                 .send({ success: true, msg: `delete message ${req.params.id}` });
         } else {
             res
-            .status(404)
-            .send({ error: "cannot find message" });
+                .status(404)
+                .send({ error: "cannot find message" });
         }
     });  
 };

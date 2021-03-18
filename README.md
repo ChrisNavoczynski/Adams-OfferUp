@@ -1,5 +1,6 @@
 
-# AD320-TeamAdams - Week: 10
+# AD320-TeamAdams - Week10
+
 
 ## Team Members:
 * Alas I Ali
