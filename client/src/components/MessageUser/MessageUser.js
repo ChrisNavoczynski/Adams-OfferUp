@@ -33,7 +33,7 @@ const MessageUser = (props) => {
         id="standard-multiline-static"
         label="Subject: "
         variant="outlined"
-        placeholder="A thing"
+        placeholder="Subject: "
         multiline
         rows={1}
       />
@@ -41,9 +41,9 @@ const MessageUser = (props) => {
         className={classes.labels}
         fullWidth
         id="standard-multiline-static"
-        label="Message:     "
+        label="Message: "
         variant="outlined"
-        placeholder="What's Up?"
+        placeholder="Message: "
         multiline
         rows={4}
       />
