@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Button,
-  InputBase,
-  Typography,
   Toolbar,
+  Menu,
+  MenuItem,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import Colors from '../../constants/colors';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,33 +16,44 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   toolbar: {
-    backgroundColor: '#80cbc4',
+    backgroundColor: Colors.teal,
+    fontWeight: 'bold',
+    justifyContent: 'space-between',
+    padding: theme.spacing(3),
   },
-  title: {
-    width: '100%',
-    color: 'black',
-    margin: theme.spacing(2),
-  },
-  search: {
-    borderRadius: theme.shape.borderRadius,
-    paddingLeft: '5px',
-    textAlign: 'left',
-    margin: theme.spacing(2),
-    width: '50%',
-    backgroundColor: '#b2dfdb',
+  categories: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    '&:hover': {
+      backgroundColor: Colors.lightTeal,
+    },
   },
   sideButton: {
-    width: '100px',
-    backgroundColor: '#80cbc4',
     fontWeight: 'bold',
-    margin: theme.spacing(2),
+    fontSize: 18,
+    '&:hover': {
+      backgroundColor: Colors.lightTeal,
+    },
   },
   logo: {
     fontWeight: 'bold',
+    fontSize: 32,
+    '&:hover': {
+      backgroundColor: Colors.lightTeal,
+    },
   },
 }));
 
 export default function Header() {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -52,18 +64,27 @@ export default function Header() {
             to="/"
             color="inherit"
           >
-            <Button>
-              <Typography className={classes.logo} variant="h4">
-                AdamsOfferUp
-              </Typography>
+            <Button className={classes.logo} aria-label="To Home Page">
+              AdamsOfferUp
             </Button>
           </Link>
-          <div className={classes.search}>
-            <InputBase placeholder="Search..." fullWidth="true" />
-          </div>
-          <Link to="/helppage">
+          <Button className={classes.categories} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            Categories
+          </Button>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem component={Link} to="/furniture" onClick={handleClose}>Furniture</MenuItem>
+            <MenuItem component={Link} to="/collectables" onClick={handleClose}>Collectables</MenuItem>
+            <MenuItem component={Link} to="/electronics" onClick={handleClose}>Electronics</MenuItem>
+          </Menu>
+          <Link to="/profile">
             <Button className={classes.sideButton}>
-              How it Works
+              Profile
             </Button>
           </Link>
           <Link to="/login">
