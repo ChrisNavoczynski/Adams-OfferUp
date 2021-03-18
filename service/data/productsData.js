@@ -1,4 +1,4 @@
-exports.productListing = [
+exports.productsList = [
     {
        itemName: "Padded Gaming Chair",
        image: "/img/gamingchair.jpg",
@@ -10,8 +10,8 @@ exports.productListing = [
            visual: "Seattle, WA",
            latitude: 47.5562833,
            longitude: -122.2672822,
-        seller: "Stephen Kings"
-       }
+       },
+       seller: "Stephen Kings",
     },
 
     {
@@ -25,8 +25,8 @@ exports.productListing = [
             visual: "Olympia, WA",
             latitude: 47.0530121,
             longitude: -122.8903856,
-        seller: "Ryan reynolders"
-        }
+        },
+        seller: "Ryan Reynolders",
     },
 
     {
@@ -40,8 +40,8 @@ exports.productListing = [
             visual: "Mercer Island, WA",
             latitude: 47.5885737,
             longitude: -122.2435174,
-        seller: "Bruce Waynes"
-        }
+        },
+        seller: "Bruce Waynes",
     },
 
     {
@@ -55,8 +55,8 @@ exports.productListing = [
             visual: "Leavenworth, WA",
             latitude: 47.5978275,
             longitude: -120.6688763,
-        seller: "Selina Killer"
-        }
+        },
+        seller: "Selina Killer",
     },
 
     {
@@ -70,8 +70,8 @@ exports.productListing = [
             visual: "Yakima, WA",
             latitude: 46.5847687,
             longitude: -120.6083732,
-        seller: "Capt. Chris Evant"
-        }
+        },
+        seller: "Capt. Chris Evant",
     },
     
     {
@@ -85,8 +85,8 @@ exports.productListing = [
             visual: "Kirkland, WA",
             latitude: 47.686113,
             longitude: -122.216684,
-        seller: "Wanda Minimoff"
-        }
+        },
+        seller: "Wanda Minimoff",
     },
 
     {
@@ -100,8 +100,8 @@ exports.productListing = [
             visual: "Bainbridge Island, WA",
             latitude: 47.630533,
             longitude: -122.522436,
-        seller: "Thor Hammer"
-        }
+        },
+        seller: "Thor Hammer",
     },
 
     {
@@ -115,8 +115,8 @@ exports.productListing = [
             visual: "Seattle, WA",
             latitude: 47.6143275,
             longitude: -122.33907002,
-        seller: "Morgana LeFries"
-        }
+        },
+        seller: "Morgana LeFries",
     },
 
     {
@@ -130,8 +130,8 @@ exports.productListing = [
             visual: "Seattle, WA",
             latitude: 47.6063546,
             longitude: -122.3402312,
-        seller: "Natasha Widow"
-        }
+        },
+        seller: "Natasha Widow",
     },
 
     {
@@ -145,7 +145,7 @@ exports.productListing = [
             visual: "Redmond, WA",
             latitude: 47.674794,
             longitude: -122.1226772,
-        seller: "Vision Soulstone"
-        }
+        },
+        seller: "Vision Soulstone",    
     },
  ];
