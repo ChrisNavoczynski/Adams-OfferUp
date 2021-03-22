@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '.env' });
+require("dotenv").config({ path: `${__dirname}/../.env` });
 const axios = require('axios');
 const debug = require('debug')('api');
 
@@ -10,7 +10,7 @@ exports.getLocation = async (location) => {
   const addressParam = `address=${encodedAddress}`;
   const apiKeyParam = `&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
   const requestURL = `${GoogleGeocodeURL}${addressParam}${apiKeyParam}`;
-
+ 
   const response = await axios.get(requestURL);
   if (response.data.status === 'OK') {
     const geocodeResult = response.data.results[0];

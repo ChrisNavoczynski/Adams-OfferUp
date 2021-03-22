@@ -66,7 +66,7 @@ exports.createProduct = async (req, res, next) => {
     // This Google Map portion taken directly from Jason's sample code
     if (req.body.location.length === 0) {
         res.status(400);
-        res.send({ error: 'Please enter a valid zipcode' });
+        res.send({ error: 'Please enter a valid address' });
     } else {
     let geocodedLocation;
         try {
