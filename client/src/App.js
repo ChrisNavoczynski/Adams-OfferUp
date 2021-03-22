@@ -8,7 +8,7 @@ import ItemPage from './components/ItemPage/ItemPage';
 // import LoginModal from './components/LoginModal/logIn';
 // import Register from './components/Register/register';
 import MessageUser from './components/MessageUser/MessageUser';
-import ThreadList from './components/ThreadList/ThreadList';
+import ConversationList from './components/ThreadList/ConversationList';
 import FileUploader from './components/UploadUtilities/FileUploader';
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
           <Route path="/profile">
             {/** user profile */}
           </Route>
-          <Route path="/threadlist">
-            <ThreadList />
+          <Route path="/conversation">
+            <ConversationList />
           </Route>
           <Route path="/fileupload">
             <FileUploader />
