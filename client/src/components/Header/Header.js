@@ -7,7 +7,7 @@ import {
   MenuItem,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Colors from '../../constants/colors';
 
 const useStyles = makeStyles((theme) => ({
@@ -60,11 +60,12 @@ export default function Header() {
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
           <Link
+            aria-label="To Home Page"
             underline="none"
             to="/"
             color="inherit"
           >
-            <Button className={classes.logo} aria-label="To Home Page">
+            <Button className={classes.logo}>
               AdamsOfferUp
             </Button>
           </Link>

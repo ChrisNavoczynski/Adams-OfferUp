@@ -38,9 +38,8 @@ app.use("/api/v1/messages", messagesRouter);
 app.use("/api/v1/users", usersRouter);
 app.use("/api/v1/uploads", uploadRouter);
 
-//Update products
 app.post("/api/v2/products", (req, res) => {
-    res.send("Future Updates Go Here!");
+    res.send("New Products Yay!");
 });
 app.post("/api/v2/users", (req, res) => {
     res.status(501);
