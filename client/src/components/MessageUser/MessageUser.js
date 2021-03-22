@@ -1,9 +1,9 @@
+import React, { useState } from 'react';
 import {
   Paper,
   makeStyles,
   TextField,
 } from '@material-ui/core';
-import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MessageUser = (props) => {
+export default function MessageUser() {
   const classes = useStyles();
   return (
     <Paper
@@ -49,6 +49,4 @@ const MessageUser = (props) => {
       />
     </Paper>
   );
-};
-
-export default MessageUser;
+}
