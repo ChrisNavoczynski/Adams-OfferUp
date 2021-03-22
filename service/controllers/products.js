@@ -1,36 +1,6 @@
 const Products = require("../models/products");
-
-exports.createProduct = (req, res, next) => {
-    if (req.body.itemName.trim().length === 0) {
-        res.status(411);
-        res.send({error: "A Product name is required"});
-    }
-    if (req.body.price == null || req.body.price <= 0) {
-        res.status(406);
-        res.send({error: "Price cannot be zero $ or lower"});
-    }
-
-const categoryType = req.body.categoryType;
-const categoryArr = categoryType.split(",");
-    
-const product = {
-    itemName: req.body.itemName,
-    categoryType: categoryArr,
-    available: req.body.available,
-    price: req.body.price,
-    description: req.body.description,
-    location: req.body.location,
-    seller: req.body.seller
-};
-
-Products.create(product)
-    .then((newItem) => {
-        res.send({ newItemId: newItem._id });
-    })
-    .catch((error) => {
-        next(error);
-    });
-};
+const { getLocation } = require("../util/GoogleMapWrapper");
+const debug = require('debug')('api');
 
 exports.getProducts = (req, res, next) => {
     res
@@ -80,6 +50,55 @@ exports.deleteProduct = (req, res, next) => {
         } else {
             next();
         }
-    });  
-};
+    });
+}
+
+exports.createProduct = async (req, res, next) => {
+    if (req.body.itemName.trim().length === 0) {
+        res.status(411);
+        res.send({error: "A Product name is required"});
+    }
+    if (req.body.price == null || req.body.price <= 0) {
+        res.status(406);
+        res.send({error: "Price cannot be zero $ or lower"});
+    }
+
+    // This Google Map portion taken directly from Jason's sample code
+    if (req.body.location.length === 0) {
+        res.status(400);
+        res.send({ error: 'Please enter a valid address' });
+    } else {
+    let geocodedLocation;
+        try {
+            geocodedLocation = await getLocation(req.body.location);
+            debug(`Geocoded Location ${geocodedLocation}`);
+        } catch (err) {
+            res
+                .status(400)
+                .send({ error: 'Invalid Location' });
+            debug(`Location error ${err}`);
+        }
+       
+    const product = {
+        itemName: req.body.itemName,
+        categoryType: req.body.categoryType,
+        available: req.body.available,
+        price: req.body.price,
+        description: req.body.description,
+        seller: req.body.seller,
+        location: geocodedLocation,
+    };
+
+    Products.create(product)
+        .then((newItem) => {
+            res
+            .status(200)
+            .send({ ItemId: newItem._id });
+        })
+        .catch((error) => {
+            res
+            .status(406)
+            .send(error);
+    });
+}};
 

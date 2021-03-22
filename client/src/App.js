@@ -5,7 +5,6 @@ import './App.css';
 import ItemRow from './components/ItemRow/ItemRow';
 import Header from './components/Header/Header';
 import ItemPage from './components/ItemPage/ItemPage';
-// import LoginModal from './components/LoginModal/logIn';
 // import Register from './components/Register/register';
 import MessageUser from './components/MessageUser/MessageUser';
 import ThreadList from './components/ThreadList/ThreadList';

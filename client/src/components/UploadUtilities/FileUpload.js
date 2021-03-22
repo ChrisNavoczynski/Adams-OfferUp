@@ -5,7 +5,7 @@ export default function useFileUpload(key, file, uploadProgressHandler) {
   const formData = new FormData();
   formData.append(key, file);
   const axiosConfig = {
-    url: '/v1/uploads',
+    url: '/api/v1/uploads',
     method: 'post',
     headers: {
       'Content-Type': 'multipart/form-data',
