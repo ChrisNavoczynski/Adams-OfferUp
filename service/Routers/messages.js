@@ -26,7 +26,7 @@ const checkJwt = jwt({
      algorithms: ["RS256"],
 });
 
-router.use(checkJwt);
+// router.use(checkJwt);
 
 router
     .route("/")
