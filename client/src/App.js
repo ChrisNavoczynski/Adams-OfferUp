@@ -46,6 +46,7 @@ function App() {
             {/** this will be replaced by a component with random items */}
             <ItemRow />
             <ItemRow />
+            <ItemRow />
           </Route>
         </Switch>
       </div>

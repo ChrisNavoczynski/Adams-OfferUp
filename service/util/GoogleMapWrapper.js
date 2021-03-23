@@ -12,6 +12,7 @@ exports.getLocation = async (location) => {
   const requestURL = `${GoogleGeocodeURL}${addressParam}${apiKeyParam}`;
  
   const response = await axios.get(requestURL);
+  console.log (response.data.error_message)
   if (response.data.status === 'OK') {
     const geocodeResult = response.data.results[0];
     const location = {
