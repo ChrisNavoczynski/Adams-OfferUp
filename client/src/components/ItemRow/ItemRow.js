@@ -6,7 +6,7 @@ import { Grid } from '@material-ui/core';
 import ItemCard from '../ItemCard/ItemCard';
 import './ItemRow.css';
 
-const itemRow = (props) => {
+const itemRow = () => {
   const items = [
     {
       id: '1',
