@@ -4,7 +4,7 @@ const Messages = require("../models/messages");
 // @route   GET /api/v1/messages
 // @access  Private
 exports.getMessages = (req, res, next) => {
-    Messages.find({ users: req.body.user }, (error, messages) => {
+    Messages.find({}, (error, messages) => {
         if (error) {
             next(error);
         } else if (messages) {
@@ -110,7 +110,8 @@ exports.updateMessage = (req, res, next) => {
             messages: {
                 // TODO: add current authenticated user
                 from: req.body.from,
-                message: req.body.message
+                message: req.body.message,
+                subject: req.body.subject,
             }
         }
     };

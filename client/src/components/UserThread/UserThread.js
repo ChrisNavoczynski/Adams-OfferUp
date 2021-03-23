@@ -8,10 +8,7 @@ import {
   CardContent,
   makeStyles,
   Typography,
-  CardActions,
-  Button,
 } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -26,27 +23,23 @@ const useStyles = makeStyles((theme) => ({
 
 const Message = (props) => {
   const classes = useStyles();
-  const threadID = props.message.id;
+  const { message } = props;
   return (
     <Card className={classes.card} variant="outlined">
       <CardContent>
         <Typography>
           From:
-          {props.message.from}
+          {message.from}
         </Typography>
         <Typography>
           Subject:
-          {props.message.subject}
+          {message.subject}
+        </Typography>
+        <Typography>
+          Message:
+          {message.message}
         </Typography>
       </CardContent>
-      <Link
-        className={classes.link}
-        to={`/thread/${threadID}`}
-      >
-        <CardActions>
-          <Button fullWidth="true">Go To Thread</Button>
-        </CardActions>
-      </Link>
     </Card>
   );
 };
