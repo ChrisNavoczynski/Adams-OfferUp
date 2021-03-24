@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Colors from '../../constants/colors';
 import CatDropDown from './CatDropDown';
+import ProductUser from '../ProductUser/ProductUser';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,9 +55,13 @@ export default function Header() {
             </Button>
           </Link>
           <CatDropDown />
-          <Link to="/profile" style={{ textDecoration: 'none' }}>
+          <Link
+            style={{ textDecoration: 'none' }}
+            to="/productuser"
+            color="inherit"
+          >
             <Button className={classes.sideButton}>
-              Profile
+              Sell
             </Button>
           </Link>
           <Link to="/login" style={{ textDecoration: 'none' }}>

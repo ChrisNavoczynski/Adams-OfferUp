@@ -57,7 +57,7 @@ export default function CatDropDown(props) {
         <MenuItem component={Link} to="/books" onClick={handleClose}>Books</MenuItem>
         <MenuItem component={Link} to="/cds_dvds" onClick={handleClose}>CDs and DVDs</MenuItem>
         <MenuItem component={Link} to="/cellphones" onClick={handleClose}>Cellphones</MenuItem>
-        <MenuItem component={Link} to="/clothing" onClick={handleClose}>Electronics</MenuItem>
+        <MenuItem component={Link} to="/clothing" onClick={handleClose}>Clothing</MenuItem>
         <MenuItem component={Link} to="/collectibles" onClick={handleClose}>Collectibles</MenuItem>
         <MenuItem component={Link} to="/computer" onClick={handleClose}>Computer Equipment</MenuItem>
         <MenuItem component={Link} to="/electronics" onClick={handleClose}>Electronics</MenuItem>
