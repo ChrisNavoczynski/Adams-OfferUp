@@ -9,7 +9,7 @@ import ItemRow from '../ItemRow/ItemRow';
 import PHOTO from '../itemPage_components/photo.jpg';
 import MapLocation from '../MapLocation';
 
-const itemPage = (props) => (
+const itemPage = () => (
   <div className="itemPage">
     <div className="description">
       <div className="photo">

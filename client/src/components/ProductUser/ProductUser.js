@@ -6,7 +6,6 @@ import {
   TextField,
   Button,
   MenuItem,
-  Container,
   Typography,
 } from '@material-ui/core';
 import CurrencyTextField from '@unicef/material-ui-currency-textfield';
@@ -50,7 +49,6 @@ export default function ProductUser() {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    console.log('name ', name, ' value ', value);
     setFormValues({
       ...formValues,
       [name]: value,

@@ -40,7 +40,6 @@ export default function MessageUser() {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    console.log('name ', name, ' value ', value);
     setFormValues({
       ...formValues,
       [name]: value,

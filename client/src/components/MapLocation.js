@@ -11,7 +11,7 @@ const mapStyles = makeStyles({
   },
 });
 
-export default function MapLocation({ location }) {
+export default function MapLocation() {
   const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   const mapClass = mapStyles();
   return (

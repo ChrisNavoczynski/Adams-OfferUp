@@ -4,7 +4,7 @@ const mapSchema = new mongoose.Schema({
   readable: String,
   latitude: Number,
   longitude: Number,
-})
+});
 
 const itemsSchema = new mongoose.Schema({
     itemName: {type: String, required: true},
