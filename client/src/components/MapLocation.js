@@ -22,9 +22,9 @@ export default function MapLocation() {
         defaultCenter={[47.6062, -122.3321]}
       >
         <PinPoint
+          text="My Location"
           lat={47.6062}
           lng={-122.3321}
-          text="My Location"
         />
       </GoogleMapReact>
     </div>
