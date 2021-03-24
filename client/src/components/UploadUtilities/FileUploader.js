@@ -95,7 +95,7 @@ export default function FileUploader() {
         disabled={!selectedFile}
         onClick={upload}
       >
-        Submit
+        Upload
       </Button>
       <CircularProgress variant="determinate" value={uploadProgress} />
       { error ? <div> Something is not quite right! </div> : null }

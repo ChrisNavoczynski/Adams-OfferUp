@@ -9,6 +9,7 @@ import ItemPage from './components/ItemPage/ItemPage';
 import MessageUser from './components/MessageUser/MessageUser';
 import ConversationList from './components/ThreadList/ConversationList';
 import FileUploader from './components/UploadUtilities/FileUploader';
+import ProductUser from './components/ProductUser/ProductUser';
 
 function App() {
   return (
@@ -22,8 +23,8 @@ function App() {
           <Route path="/thread/:id">
             {/** individual message thread */}
           </Route>
-          <Route path="/profile">
-            {/** user profile */}
+          <Route path="/productuser">
+            <ProductUser />
           </Route>
           <Route path="/conversation">
             <ConversationList />
@@ -44,6 +45,7 @@ function App() {
           </Route>
           <Route exact path="/">
             {/** this will be replaced by a component with random items */}
+            <ItemRow />
             <ItemRow />
             <ItemRow />
           </Route>

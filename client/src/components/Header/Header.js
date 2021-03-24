@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   AppBar,
   Button,
   Toolbar,
-  Menu,
-  MenuItem,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Colors from '../../constants/colors';
+import CatDropDown from './CatDropDown';
+import ProductUser from '../ProductUser/ProductUser';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,13 +20,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     justifyContent: 'space-between',
     padding: theme.spacing(3),
-  },
-  categories: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    '&:hover': {
-      backgroundColor: Colors.lightTeal,
-    },
   },
   sideButton: {
     fontWeight: 'bold',
@@ -45,21 +38,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header() {
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
           <Link
+            style={{ textDecoration: 'none' }}
             aria-label="To Home Page"
             underline="none"
             to="/"
@@ -69,31 +54,22 @@ export default function Header() {
               AdamsOfferUp
             </Button>
           </Link>
-          <Button className={classes.categories} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-            Categories
-          </Button>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
+          <CatDropDown />
+          <Link
+            style={{ textDecoration: 'none' }}
+            to="/productuser"
+            color="inherit"
           >
-            <MenuItem component={Link} to="/furniture" onClick={handleClose}>Furniture</MenuItem>
-            <MenuItem component={Link} to="/collectables" onClick={handleClose}>Collectables</MenuItem>
-            <MenuItem component={Link} to="/electronics" onClick={handleClose}>Electronics</MenuItem>
-          </Menu>
-          <Link to="/profile">
             <Button className={classes.sideButton}>
-              Profile
+              Sell
             </Button>
           </Link>
-          <Link to="/login">
+          <Link to="/login" style={{ textDecoration: 'none' }}>
             <Button className={classes.sideButton}>
               Log In
             </Button>
           </Link>
-          <Link to="/signup">
+          <Link to="/signup" style={{ textDecoration: 'none' }}>
             <Button className={classes.sideButton}>
               Sign Up
             </Button>
