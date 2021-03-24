@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Colors from '../../constants/colors';
 
 const ITEM_HEIGHT = 80;
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   categories: {
     fontWeight: 'bold',
     fontSize: 18,
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CatDropDown(props) {
+export default function CatDropDown() {
   const [anchorEl, setAnchorEl] = useState(null);
   const classes = useStyles();
 
