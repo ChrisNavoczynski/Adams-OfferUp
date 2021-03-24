@@ -1,11 +1,21 @@
 const Products = require("../models/products");
 const { getLocation } = require("../util/GoogleMapWrapper");
-const debug = require('debug')('api');
+const debug = require("debug")("api");
 
 exports.getProducts = (req, res, next) => {
-    res
-        .status(200)
-        .send({ success: true, msg: "show all products" });
+    Products.find({}, (error, messages) => {
+        if (error) {
+            next(error);
+        } else if (messages) {
+            res
+                .status(200)
+                .send(messages);
+        } else {
+            res
+                .status(404)
+                .send({ error: "cannot find messages" });
+        }
+    });
 };
 
 exports.getProduct = (req, res, next) => {
@@ -51,7 +61,7 @@ exports.deleteProduct = (req, res, next) => {
             next();
         }
     });
-}
+};
 
 exports.createProduct = async (req, res, next) => {
     if (req.body.itemName.trim().length === 0) {
@@ -66,7 +76,7 @@ exports.createProduct = async (req, res, next) => {
     // This Google Map portion taken directly from Jason's sample code
     if (req.body.location.length === 0) {
         res.status(400);
-        res.send({ error: 'Please enter a valid address' });
+        res.send({ error: "Please enter a valid address" });
     } else {
     let geocodedLocation;
         try {
@@ -75,7 +85,7 @@ exports.createProduct = async (req, res, next) => {
         } catch (err) {
             res
                 .status(400)
-                .send({ error: 'Invalid Location' });
+                .send({ error: "Invalid Location" });
             debug(`Location error ${err}`);
         }
        
