@@ -25,25 +25,18 @@ To design a mock Web App for the resale of products.
 * Currently (3/24/2021) the mock item cards represented on the page will be where recently added products.  When you click on one it would take you to an Item Detail page. 
 
 #### The Nav Bar:
-|----|
-|Logo| This will revert a user back to the Home Page
-|----|
+* |Logo| This will revert a user back to the Home Page
+             
+* |Categories| A drop down menu with preselected options to narrow down searches Currently nonfunctional (3/24/2021)
 
-|----------| A drop down menu with preselected options to narrow down searches
-|Categories| Currently nonfunctional (3/24/2021)
-|----------|
+* |Sell| A seller (once logged in) Would be able to add a new item to sell
+(See below for more details)
 
-|----| A seller (once logged in) Would be able to add a new item to sell
-|Sell| (See below for more details)
-|----|
+* |LogIn| Existing users and sellers would log-in here
+Currently nonexistent (3/24/2021)
 
-|-----| Existing users and sellers would log-in here
-|LogIn| Currently nonexistent (3/24/2021)
-|-----|
-
-|------| New users and sellers would signup to browse items to buy or sell
-|SignUp| Currently nonexistent (3/24/2021)
-|------|
+* |SignUp| New users and sellers would signup to browse items to buy or sell
+Currently nonexistent (3/24/2021)
 
 #### The Sell Option:
 * When clicking on the Sell button you are taken to a form page to create (POST)
