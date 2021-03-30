@@ -1,12 +1,6 @@
 
 # AD320-TeamAdams 
 
-## Team Members:
-* Alas I Ali
-* Courtney Hoppus
-* Chris Navoczynski
-* Dylan Wilkinson
-
 ## Application Purpose:
 To design a mock Web App for the resale of products.  
 
@@ -66,3 +60,4 @@ messages to the seller of that particular product.
 
 #### Additional Credit
 * Instructor **Jason Panzer** for weekly sample code updates, lectures, and additioal resources to utilize as a basefor functionality purposes.
+* Team contributor Courtney Hoppus
